@@ -13,3 +13,4 @@ for i in algoritm:
     strng = str(numbers) + ", " + str(i) + "\n"
     numbers += 1
     file.write(strng)
+file.close()
