@@ -12,3 +12,10 @@ def compute_bill(x):
     return s
 
 print(compute_bill(prices))
+
+def compute_bill(x):
+    res = 0
+    for i in x.values():
+        res +=i
+    return res
+print(compute_bill(prices))
