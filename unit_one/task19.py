@@ -7,7 +7,7 @@ algoritm = ["C4.5", "k - means", "Метод опорных векторов", "
 
 # Каждое значение из списка должно находится на отдельной строке.
 
-file = open("algoritm.csv", "w")
+file = open("algoritm.csv", "w", encoding = "UTF-8")
 numbers = 1
 for i in algoritm:
     strng = str(numbers) + ", " + str(i) + "\n"
