@@ -22,13 +22,13 @@ file.write(text)
 file.close()
 
 file = open("import_this.txt", "r")
-res = len(file.readlines())
-r = 0
-file.seek(0)
+lst = []
 for i in file.readlines():
-    ac = res - r-1
-    print(ac)
-    file.seek(0)
-    print(file.readlines(3))
-    r +=1
-print(res)
+    if "\n" in i:
+        lst.append(i.rstrip("\n"))
+        # lst.append(i[0:len(i)-1]) # Или так
+    if "\n" not in i:
+        lst.append(i)
+for j in lst[::-1]:
+    print(j)
+file.close()

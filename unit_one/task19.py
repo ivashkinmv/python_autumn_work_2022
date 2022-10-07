@@ -2,6 +2,7 @@
 # – id - номер по порядку (от 1 до 10);
 # – текст из списка algoritm
 
+import csv
 algoritm = ["C4.5", "k - means", "Метод опорных векторов", "Apriori",
 "EM", "PageRank", "AdaBoost", "kNN", "Наивный байесовский классификатор", "CART"]
 
