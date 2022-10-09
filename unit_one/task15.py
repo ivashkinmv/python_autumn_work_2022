@@ -28,26 +28,28 @@
 from random import randint
 
 words = ["оператор", "конструкция", "объект"]
-desc_ = ["Это слово обозначает наименьшую автономную часть языка программирования", "Это конструкция загадана", "Это объект загадан" ]
-
+desc_ = ["Это слово обозначает наименьшую автономную часть языка программирования", "Это конструкция загадана",
+         "Это объект загадан"]
 
 x = randint(0, 2)
-for n,i in enumerate(desc_):
-    if n == x:
-        print(desc_[x])
-        # print(words[x])
-        word = words[x]
-        template = "_" * len(word)
-        print(template , "Здесь", len(word), "букв")
-        letter = str(input("Загадай букву, но только одну :"))
-
-        for nl,w in enumerate(word):
-            if letter == w:
-                # template[nl] = w
-                print(word[nl])
-                print(nl, w)
-                print(template[nl])
-
-
-
-# print (x)
+print(desc_[x])
+word = words[x]
+# print(word) # Подсказка
+q_mstke = 10  # config Количество попыток
+template = ["_"] * len(word)
+print("".join(template), "Здесь", len(word), "букв")
+mstke = 0
+while word != "".join(template):
+    ans_letter = str(input("Введи букву, но только одну :"))
+    if ans_letter not in word:
+        mstke += 1
+        print("Нет такой буквы в слове", "Осталось ", q_mstke - mstke, "попыток")
+        if mstke == q_mstke:
+            print("У вас больше нет попыток")
+            break
+    cntr = 0
+    for lttr in word:
+        if ans_letter == lttr:
+            template[word.index(lttr, cntr, len(word))] = ans_letter
+            cntr = word.index(lttr, cntr, len(word)) + 1
+    print("".join(template), "Здесь", len(word), "букв")
