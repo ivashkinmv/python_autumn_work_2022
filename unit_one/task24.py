@@ -8,15 +8,35 @@
 
 num_str = """8 5 12 12 15
 8 5 12 12 15 , 0 23 15 18 12 4 !"""
+file = open("num_str.txt", "wt+", encoding="utf-8")
+file.write(num_str)
 
 letters_en_up = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 letters_en_dwn = letters_en_up.lower()
-lst = []
-x = num_str.split(" ")
 
-# for g in range(1, len(letters_en_dwn)+1):
+x = num_str.split(" ")
+lst = []
 for i in x:
-    print(i.isnumeric())
+    if "\n" in i:
+        y = i.split("\n")
+        for f in y:
+            lst.append(f)
+    else:
+        lst.append(i)
+lst2 = []
+for c in lst:
+    try:
+        if int(c) is not int:
+            lst2.append(int(c))
+        elif c is not int:
+            lst2.append(c)
+    except ValueError:
+        pass
+print(lst2)
+# print(x)
+# for g in range(1, len(letters_en_dwn)+1):
+# for i in x:
+#     print(i.isnumeric())
     # try:
     #     if type(int(i)) is int:
     #         print(i)
@@ -35,5 +55,4 @@ for i in x:
     #     print(letters_en_dwn[v-1])
     # res += 1
 # lst.append(i)
-
 
