@@ -19,20 +19,39 @@ lst = []
 for i in x:
     if "\n" in i:
         y = i.split("\n")
+        z = x.index(i)
         for f in y:
             lst.append(f)
     else:
         lst.append(i)
+lst.insert(z+1, "\n")
 lst2 = []
 for c in lst:
     try:
-        if int(c) is not int:
+        if type(int(c)) is int:
             lst2.append(int(c))
-        elif c is not int:
+        else:
             lst2.append(c)
     except ValueError:
-        pass
-print(lst2)
+        lst2.append(c)
+# print(lst2)
+output = []
+for ind in lst2:
+    if type(ind) is int:
+    # print(type(ind))
+        for let in range(1,len(letters_en_dwn)):
+            if ind == let:
+                output.append(letters_en_dwn[let-1])
+                # print(letters_en_dwn[let-1])
+        if ind == 0:
+                output.append(" ")
+    else:
+        output.append(ind)
+        # print(ind)
+
+print("".join(output))
+
+
 # print(x)
 # for g in range(1, len(letters_en_dwn)+1):
 # for i in x:
