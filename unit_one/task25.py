@@ -7,11 +7,13 @@
 # apple	                        aple
 # 25.04.2022 Good morning !!	    godmrni
 
+
 letters_en_up = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 letters_en_dwn = letters_en_up.lower()
 
 text = """apple
 25.04.2022 Good morning !!"""
+
 file = open("apple.txt", "wt+", encoding="utf-8")
 file.write(text)
 
