@@ -15,15 +15,16 @@
 #                ||3 6||
 
 # TODO Решение
-transpose = ([[1, 2, 3], [4, 5, 6]])
+transpose = [[1, 2, 3], [4, 5, 6]]
 
-len_trans = len(transpose)
-# for i in range(0, len(transpose)):
-#     for j in range(0, len(transpose[i])):
-#         # print(i,j)
-#         print(transpose)
-# # result = [y for x in transpose for y in x]
-# # print(result)
-# r = 1
-print(transpose)
+# lst2 = []
+# for j in range(len(transpose[0])):
+#     lst = []
+#     lst2.append(lst)
+#     for i in range(len(transpose)):
+#         lst.append(transpose[i][j])
+# print(lst2)
+
+
+print([[transpose[i][j] for i in range(len(transpose))] for j in range(len(transpose[0]))])
 

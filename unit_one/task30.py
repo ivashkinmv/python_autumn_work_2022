@@ -13,7 +13,7 @@ matrix = [[1, 2, 3], [4, 5, 6]]
 #         lst.append(y)
 # print(sum(lst))
 # TODO Решение
-result = [y for x in matrix for y in x]
-print(sum(result))
+result = sum([y for x in matrix for y in x])
+print(result)
 
 
