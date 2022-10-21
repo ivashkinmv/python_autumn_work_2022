@@ -4,86 +4,67 @@
 
 
 from random import randint
-q_mstke = 10  # config Количество попыток
-def mistake():
-    global cntr
-    if cntr >= 3:
-        cntr = 0
-    cntr += 1
-    return cntr
-
+# q_mstke = 10  # config Количество попыток
+# def mistake():
+#     global cntr
+#     if cntr >= 3:
+#         cntr = 0
+#     cntr += 1
+#     return cntr
+#
 words = ["оператор", "конструкция", "объект"]
 desc_ = ["Это слово обозначает наименьшую автономную часть языка программирования", "Это конструкция загадана",
          "Это объект загадан"]
-
+#
 x = randint(0, 2)
-print(desc_[x])
-word = words[x]
-# print(word) # Подсказка
 
-template = ["_"] * len(word)
-print("".join(template), "Здесь", len(word), "букв")
-mstke = 0
-while word != "".join(template):
-    ans_letter = str(input("Введи букву, но только одну :"))
-    if ans_letter not in word:
-        mstke += 1
-        print("Нет такой буквы в слове", "Осталось ", q_mstke - mstke, "попыток")
-        if mstke == q_mstke:
-            print("У вас больше нет попыток")
-            break
-    cntr = 0
-    for lttr in word:
-        if ans_letter == lttr:
-            template[word.index(lttr, cntr, len(word))] = ans_letter
-            cntr = word.index(lttr, cntr, len(word)) + 1
-    print("".join(template), "Здесь", len(word), "букв")
+# a = "оператор"
 
-a = "оператор"
+
+a = words[x]
 b = ["_"]*len(a)
 
-# cntr = 0
-# def mistake():
-#     global cntr
-#     global a
-#     if cntr >= len(a):
-#         cntr += 1
-#     return cntr
-# lttr = str(input("Введите букву: "))
+mstke = 0
 
-# def letter():
-#     lttr = str(input("Введите букву: "))
-#     # print(lttr)
-#     return lttr
-# # lttr = str(input("Введите букву: "))
-# cntr = 0
-# def game():
-#     global a
-#     global b
-#     global cntr
-#     lttr = str(input("Введите букву: "))
-#     if letter() in a:
-#         # x = a.index("о")
-#         x = a.index(lttr, cntr, len(a))
-#         for i in a:
-#             if lttr == i:
-#                 b[x] = lttr
-#             cntr += 1
-#         return "".join(b)
-# # print(game())
-# # def ng():
-# #     global b
-# #     global a
-# #     # global lttr
-# #     for i in a:
-# #         if letter() == i:
-# #             b[game()] = letter()
-# #     print("".join(b))
+
+def mistake():
+    global mstke
+    global a
+    mstke += 1
+    return mstke
+
+
 #
-# # while
-# game()
-# # letter()
-# # ng()
-#
-#
-# # print("".join(b))
+def letter():
+    lttr = str(input("Введите букву: "))
+    return lttr
+
+
+def game():
+    global b
+    global a
+    global mstke
+    lttr = letter()
+    cntr = 0
+    if lttr not in a:
+        print("Ошибка", mistake(), "из 3")
+        if mstke == 3:
+            print("Ваши попытки закончились")
+    for i in a:
+        if lttr == i:
+            b[a.index(lttr, cntr, len(a))] = lttr
+        cntr += 1
+
+
+def compare():
+    global a
+    global b
+    global mstke
+    while a != "".join(b) and mstke != 3:
+        print("".join(b), "здесь букв:", len(a), desc_[x])
+        game()
+    if a == "".join(b):
+        print("Слово угадано - это", "".join(b))
+
+
+compare()
