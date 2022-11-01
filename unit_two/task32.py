@@ -24,15 +24,16 @@ class Player: # класс игрока
 
 
     def __repr__(self):
-        return f""
+        return f"User(name={self.name},id={self.ids},health={self.health}, race={self.race},type={self.charac_type}," \
+               f" damage={self.self.damage}"
 
 
     def strike(self, opposite):
-
+        self.damage = randint(5, 12)
         opposite.health -= self.damage
         if opposite.health < 0:
             opposite.health = 0
-        self.health += 10
+        self.health += 0
         print(self.name, "hit", opposite.name, 'силой', self.damage)
         print(f"У {opposite.name} осталось энергии {opposite.health}")
         # print('%s = %d' % (opposite.name, opposite.health))
@@ -67,3 +68,6 @@ enemy = Player(id, 'Goblin', 100, 'Nigga', 'Barbarian', 10)
 battle = Fight(my_character, enemy)
 battle.fight()
 battle.who_winner()
+
+print(my_character.__repr__())
+print(enemy.__repr__())
