@@ -13,8 +13,9 @@
 from random import randint
 
 
-class Player: # класс игрока
-    def __init__(self, ids, name, health, race, charac_type, damage):
+class Player:  # класс игрока
+    def __init__(self, name, health, race, charac_type, damage, ids):
+        # ids = randint(1000, 9999)
         self.ids = ids
         self.name = name
         self.health = health
@@ -22,20 +23,36 @@ class Player: # класс игрока
         self.charac_type = charac_type
         self.damage = damage
 
-
     def __repr__(self):
-        return f"User(name={self.name},id={self.ids},health={self.health}, race={self.race},type={self.charac_type}," \
-               f" damage={self.self.damage}"
-
+        return f"User(id={self.ids}, name={self.name}, health={self.health}, " \
+               f"race={self.race},type={self.charac_type}, damage={self.damage})"
 
     def strike(self, opposite):
-        self.damage = randint(5, 12)
+        a = ['с вертушки ударил', 'двоичкой по']
+        b = randint(0, 1)
+        self.damage = randint(0, 12)
         opposite.health -= self.damage
         if opposite.health < 0:
             opposite.health = 0
         self.health += 0
-        print(self.name, "hit", opposite.name, 'силой', self.damage)
-        print(f"У {opposite.name} осталось энергии {opposite.health}")
+        if b == 0 and self.damage > 0 and self.damage != 12:
+            print(self.name, a[b], opposite.name, 'силой', self.damage)
+            print(f"У {opposite.name} осталось энергии {opposite.health}")
+        elif b == 1 and self.damage > 0 and self.damage != 12:
+            print(self.name, a[b], opposite.name, 'силой', self.damage)
+            print(f"У {opposite.name} осталось энергии {opposite.health}")
+        elif b == 0 and self.damage == 12:
+            print(self.name, a[b], opposite.name, 'силой', self.damage)
+            print(f"{opposite.name} пропустил критический удар" )
+            print(f"У {opposite.name} осталось энергии {opposite.health}")
+        elif b == 1 and self.damage == 12:
+            print(self.name, a[b], opposite.name, 'силой', self.damage)
+            print(f"{opposite.name} пропустил критический удар")
+            print(f"У {opposite.name} осталось энергии {opposite.health}")
+        else:
+            print(self.name, a[b], opposite.name, 'силой', self.damage)
+            print(opposite.name, "увернулся от", self.name)
+            print(f"У {opposite.name} осталось энергии {opposite.health}")
         # print('%s = %d' % (opposite.name, opposite.health))
 
 
@@ -55,15 +72,15 @@ class Fight:
         if self.player1.health > self.player2.health:
             self.result = self.player1.name + " Winner"
         elif self.player2.health > self.player1.health:
-            self.result = self.player2 + " Winner!"
+            self.result = self.player2.name + " Winner!"
 
     def who_winner(self):
         print(self.result)
 
 
-id = randint(1000, 9999)
-my_character = Player(id, 'Max', 100, 'Nigga', 'Barbarian', 10)
-enemy = Player(id, 'Goblin', 100, 'Nigga', 'Barbarian', 10)
+# idx = randint(1000, 9999)
+my_character = Player('Max', 100, 'Nigga', 'Barbarian', 10, ids=randint(1000, 9999))
+enemy = Player('Goblin', 100, 'Nigga', 'Barbarian', 10, ids=randint(1000, 9999))
 
 battle = Fight(my_character, enemy)
 battle.fight()
