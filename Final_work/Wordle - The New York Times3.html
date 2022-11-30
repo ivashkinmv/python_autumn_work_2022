@@ -1,0 +1,2808 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.nytimes.com/games/wordle/index.html -->
+<html lang="en" class="pz-dont-touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><meta name="theme-color" content="#000000"><title>Wordle - The New York Times</title><link rel="manifest" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-web-manifest.json?v=v2211281245"><link rel="apple-touch-icon" sizes="180x180" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-apple-touch-icon.png?v=v2211281245"><link rel="mask-icon" color="#FFFFFF" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-safari-pinned-tab.svg?v=v2211281245"><link rel="shortcut icon" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-favicon.ico?v=v2211281245"><link href="https://www.nytimes.com/games/wordle/undefined/games-assets/v2/assets/wordle/wordle_logo_32x32.png" rel="icon shortcut" sizes="3232"><link href="https://www.nytimes.com/games/wordle/undefined/games-assets/v2/assets/wordle/wordle_logo_192x192.png" rel="apple-touch-icon"><meta name="apple-mobile-web-app-title" content="Wordle"><meta name="application-name" content="Wordle"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="theme-color" content="#FFFFFF"><meta name="sourceApp" content="games-crosswords"><meta property="description" content="Guess the hidden word in 6 tries. A new puzzle is available each day."><meta property="og:title" content="Wordle - A daily word game"><meta property="og:url" content="https://www.nytimes.com/games/wordle"><meta property="og:description" content="Guess the hidden word in 6 tries. A new puzzle is available each day."><meta property="og:image" content="undefined/games-assets/v2/assets/wordle/wordle_og_1200x630.png"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="nytimes.com"><meta property="theme-color" content="#6aaa64"><link rel="stylesheet" type="text/css" href="./Wordle - The New York Times3_files/wordle.9a2188039ebfbc9e5c3b014b3b384361c885b2fe.css"><link rel="preload" as="script" href="https://rumcdn.geoedge.be/b3960cc6-bfd2-4adc-910c-6e917e8a6a0e/grumi.js"><script type="text/javascript" async="" src="./Wordle - The New York Times3_files/c.js"></script><script async="" src="./Wordle - The New York Times3_files/chartbeat.js"></script><script type="text/javascript" async="" id="iterate-script" src="./Wordle - The New York Times3_files/match-prod-0fad51d881eef2bb56f6.js"></script><script type="text/javascript" async="" src="./Wordle - The New York Times3_files/cs.js"></script><script id="iterate-js" async="" src="./Wordle - The New York Times3_files/loader.js"></script><script type="text/javascript" async="" src="./Wordle - The New York Times3_files/gtm.js"></script><script src="./Wordle - The New York Times3_files/grumi-ip.js" async=""></script><style type="text/css">.MomentSystem-module_moment__94wOL {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.MomentSystem-module_momentExit__Zhime {
+  opacity: 1;
+}
+
+.MomentSystem-module_momentExitActive__MPBX9 {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+.MomentSystem-module_momentEnter__txwEz {
+  opacity: 0;
+}
+
+.MomentSystem-module_momentEnterActive__Tikpx {
+  opacity: 1;
+  transition: opacity 400ms;
+}</style><style type="text/css">.LandscapeWarning-module_landscapeWarning__NXmb3 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--horizontal-warning-z-index);
+  background-color: var(--white);
+  text-align: center;
+  padding-top: 55px;
+}
+.LandscapeWarning-module_landscapeWarning__NXmb3 i {
+  height: 30%;
+  width: 20%;
+  margin: 2rem;
+}
+.LandscapeWarning-module_landscapeWarning__NXmb3 p {
+  font-family: "nyt-franklin";
+  font-weight: 500;
+  margin: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20.8px;
+  line-height: 1.3rem;
+}
+.LandscapeWarning-module_landscapeWarning__NXmb3 span {
+  font-family: "nyt-franklin";
+  font-weight: 700;
+}
+
+.LandscapeWarning-module_darkMode__Xxe6G {
+  background-color: black;
+  color: white;
+}
+
+.LandscapeWarning-module_rotate__WNO-l {
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  min-height: 20px;
+  min-width: 20px;
+  margin-right: 8px;
+  background-image: var(--icon-rotate-wordle);
+}</style><style type="text/css">.BackButton-module_backButton__5aq8S {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.BackButton-module_backButton__5aq8S:before {
+  content: "";
+  background: var(--hybrid-back) center no-repeat;
+  background-position-x: 0px;
+  display: block;
+  height: 45px;
+  padding: 0px 15px;
+  opacity: 1;
+}
+.BackButton-module_backButton__5aq8S:active:before {
+  opacity: 0.5;
+}
+
+.dark .BackButton-module_backButton__5aq8S:before {
+  background: var(--hybrid-back-dark-mode) center no-repeat;
+  background-position-x: 0px;
+}
+
+.BackButton-module_backButtonText__-7yBL {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}</style><style type="text/css">.Note-module_container__pU9cP {
+  padding: 0 20px;
+}
+
+.Note-module_note__cfaX8 {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+}
+.Note-module_note__cfaX8 .Note-module_statsIcon__06sZm {
+  margin-right: 16px;
+}
+.Note-module_note__cfaX8 .Note-module_moreLink__zEYt4 {
+  all: unset;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--black-3);
+  cursor: pointer;
+}
+.Note-module_note__cfaX8 .Note-module_noteHeader__bWkgA {
+  color: #2671dc;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: left;
+}
+.Note-module_note__cfaX8 .Note-module_noteDescription__5kiN4 {
+  color: var(--black-2);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.Note-module_note__cfaX8 .Note-module_noteSummary__LQIGg {
+  color: var(--black-3);
+  font-size: 14px;
+  line-height: 16px;
+}</style><style type="text/css">.Welcome-module_contentWelcome__3Czjm {
+  position: relative;
+  color: black;
+  max-width: 100%;
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #e3e3e1;
+}
+
+.Welcome-module_contentWelcomeContainer__4vEkN {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 42px;
+}
+
+.Welcome-module_spinner__lrZLT {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.Welcome-module_smallIconAndTitle__bwAF2 {
+  position: absolute;
+  top: 44px;
+}
+
+.Welcome-module_title__BVIWQ {
+  font-size: 36px;
+  line-height: 38px;
+  font-family: "nyt-karnakcondensed";
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+@media (min-width: 760px) {
+  .Welcome-module_title__BVIWQ {
+    font-size: 44px;
+    line-height: 1.045em;
+  }
+}
+@media (min-width: 992px) {
+  .Welcome-module_title__BVIWQ {
+    font-size: 50px;
+    line-height: 52px;
+  }
+}
+.Welcome-module_title__BVIWQ.Welcome-module_small__HrMeM {
+  font-size: 1.125em;
+  line-height: 1.111;
+}
+
+.Welcome-module_subtitle__PHs6d {
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 28px;
+  font-family: "nyt-karnak";
+  text-align: center;
+  font-weight: 400;
+  font-size: 24.8px;
+}
+@media (min-width: 760px) {
+  .Welcome-module_subtitle__PHs6d {
+    max-width: 300px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+@media (min-width: 992px) {
+  .Welcome-module_subtitle__PHs6d {
+    max-width: 375px;
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 36px;
+  }
+}
+.Welcome-module_subtitle__PHs6d .Welcome-module_bold__-meIg {
+  font-family: "nyt-karnakcondensed";
+}
+
+/* ICON */
+.Welcome-module_icon__tYMoy {
+  height: 64px;
+  margin-bottom: 16px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--wordle-icon);
+}
+@media (min-width: 768px) {
+  .Welcome-module_icon__tYMoy {
+    height: 80px;
+    margin-bottom: 12px;
+  }
+}
+.Welcome-module_icon__tYMoy.Welcome-module_small__HrMeM {
+  height: 40px;
+  margin-bottom: 8px;
+}
+@media (min-width: 768px) {
+  .Welcome-module_icon__tYMoy.Welcome-module_small__HrMeM {
+    margin-top: 10px;
+  }
+}
+
+.Welcome-module_dateContainer__qbYZe {
+  text-align: center;
+}
+
+.Welcome-module_noWrap__yxyZf {
+  white-space: nowrap;
+}
+
+.Welcome-module_date__u4kvh {
+  display: block;
+  font-size: 1em;
+  line-height: 1.25;
+  letter-spacing: 0.005em;
+  font-family: "nyt-franklin";
+  font-weight: 600;
+}
+@media (max-width: 992px) {
+  .Welcome-module_date__u4kvh {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.Welcome-module_wordleMeta__pASB3 {
+  display: block;
+  font-size: 1em;
+  line-height: 1.25;
+  letter-spacing: 0.005em;
+}
+@media (max-width: 992px) {
+  .Welcome-module_wordleMeta__pASB3 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.Welcome-module_buttonContainer__2yt5t {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 24px;
+}
+@media (min-width: 760px) {
+  .Welcome-module_buttonContainer__2yt5t {
+    margin-bottom: 28px;
+    flex-direction: row;
+  }
+}
+.Welcome-module_buttonContainer__2yt5t .Welcome-module_button__tEJl9 {
+  position: relative;
+  border: none;
+  height: 3em;
+  border-radius: 1.5em;
+  align-content: center;
+  letter-spacing: 0.05em;
+  margin: 0 10px 8px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-family: "nyt-franklin-400";
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  padding: 0 2em;
+  font-weight: 400;
+}
+@media (max-width: 760px) {
+  .Welcome-module_buttonContainer__2yt5t .Welcome-module_button__tEJl9 {
+    display: block;
+    width: 155px;
+  }
+}
+@media (min-width: 760px) {
+  .Welcome-module_buttonContainer__2yt5t .Welcome-module_button__tEJl9 {
+    width: 180px;
+  }
+}
+.Welcome-module_buttonContainer__2yt5t .Welcome-module_button__tEJl9.Welcome-module_secondary__Kwfcs {
+  background: none;
+  color: black;
+  border: 1px solid;
+  letter-spacing: 0.01em;
+}
+.Welcome-module_buttonContainer__2yt5t a {
+  all: unset;
+}
+
+.Welcome-module_back__NKsNt {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  top: 0;
+  left: var(--header-padding-x);
+}
+.Welcome-module_back__NKsNt button::before {
+  background: var(--hybrid-back) center no-repeat !important;
+  background-position-x: 0px !important;
+}</style><style type="text/css">.Spinner-module_spinner__9s8G2 {
+  -webkit-animation: Spinner-module_spin__b-mBL 1s linear infinite;
+          animation: Spinner-module_spin__b-mBL 1s linear infinite;
+}
+
+@-webkit-keyframes Spinner-module_spin__b-mBL {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes Spinner-module_spin__b-mBL {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}</style><style type="text/css">.Tile-module_tile__3ayIZ {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: bold;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: var(--tile-text-color);
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.Tile-module_tile__3ayIZ::before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 100%;
+}
+
+.Tile-module_tile__3ayIZ.Tile-module_small__JrJIQ {
+  font-size: 1.6rem;
+  padding-top: 1px;
+}
+
+/* Allow tiles to be smaller on small screens */
+@media (max-height: 600px) {
+  .Tile-module_tile__3ayIZ {
+    font-size: 1em;
+  }
+}
+.Tile-module_tile__3ayIZ[data-state=empty] {
+  border: 2px solid var(--color-tone-4);
+}
+
+.Tile-module_tile__3ayIZ[data-state=tbd] {
+  background-color: var(--color-tone-7);
+  border: 2px solid var(--color-tone-3);
+  color: var(--color-tone-1);
+}
+
+.Tile-module_tile__3ayIZ[data-state=correct] {
+  background-color: var(--color-correct);
+}
+
+.Tile-module_tile__3ayIZ[data-state=present] {
+  background-color: var(--color-present);
+}
+
+.Tile-module_tile__3ayIZ[data-state=absent] {
+  background-color: var(--color-absent);
+}
+
+.Tile-module_tile__3ayIZ[data-animation=pop] {
+  -webkit-animation-name: Tile-module_PopIn__bu7hb;
+          animation-name: Tile-module_PopIn__bu7hb;
+  -webkit-animation-duration: 100ms;
+          animation-duration: 100ms;
+}
+
+@-webkit-keyframes Tile-module_PopIn__bu7hb {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes Tile-module_PopIn__bu7hb {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+.Tile-module_tile__3ayIZ[data-animation=flip-in] {
+  -webkit-animation-name: Tile-module_FlipIn__scjpz;
+          animation-name: Tile-module_FlipIn__scjpz;
+  -webkit-animation-duration: 250ms;
+          animation-duration: 250ms;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes Tile-module_FlipIn__scjpz {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes Tile-module_FlipIn__scjpz {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+.Tile-module_tile__3ayIZ[data-animation=flip-out] {
+  -webkit-animation-name: Tile-module_FlipOut__e4DRI;
+          animation-name: Tile-module_FlipOut__e4DRI;
+  -webkit-animation-duration: 250ms;
+          animation-duration: 250ms;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes Tile-module_FlipOut__e4DRI {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes Tile-module_FlipOut__e4DRI {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}</style><style type="text/css">.Row-module_row__dEHfN {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+.Row-module_row__dEHfN.Row-module_invalid__16kR1 {
+  -webkit-animation-name: Row-module_Shake__4i0T3;
+          animation-name: Row-module_Shake__4i0T3;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+}
+
+.Row-module_win__NF7uy {
+  -webkit-animation-name: Row-module_Bounce__7NO2t;
+          animation-name: Row-module_Bounce__7NO2t;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+}
+
+@-webkit-keyframes Row-module_Bounce__7NO2t {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes Row-module_Bounce__7NO2t {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes Row-module_Shake__4i0T3 {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
+@keyframes Row-module_Shake__4i0T3 {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}</style><style type="text/css">.Board-module_boardContainer__cKb-C {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.Board-module_board__lbzlf {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}</style><style type="text/css">.Loading-module_container__lnPKB {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - var(--header-height) - 1px);
+  left: 0;
+  justify-content: center;
+  background-color: var(--color-background);
+  z-index: var(--error-z-index);
+}
+
+.Loading-module_loadingContainer__tPgFk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 82px;
+  height: 100%;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+
+.Loading-module_hide__A9nsN {
+  opacity: 0;
+}</style><style type="text/css">.Help-module_help__9NXqR {
+  width: 100%;
+  margin: auto;
+}
+
+.Help-module_subheading__9Yabp {
+  font-family: "nyt-karnak";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.Help-module_instructions__54IDr {
+  font-family: "nyt-franklin";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
+  color: var(--color-tone-1);
+}
+.Help-module_instructions__54IDr li {
+  margin-bottom: 4px;
+}
+.Help-module_instructions__54IDr li::marker {
+  font-size: 18px;
+}
+
+.Help-module_examples__eeiMV {
+  font-family: "nyt-franklin";
+}
+.Help-module_examples__eeiMV p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.Help-module_example__3UNrs {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.Help-module_example__3UNrs p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 8px;
+}
+
+.Help-module_tileContainer__WmMQw {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+}
+
+.Help-module_page__uQ7Xi {
+  padding: 16px;
+  padding-top: 0px;
+}
+
+.Help-module_reminderSignUp__b526G,
+.Help-module_feedback__65y9s {
+  font-family: "nyt-franklin";
+  font-size: 16px;
+  line-height: 20px;
+}
+.Help-module_reminderSignUp__b526G a,
+.Help-module_feedback__65y9s a {
+  color: var(--blue-2);
+}
+
+/*---auth---*/
+.Help-module_statsLogin__j0k72 {
+  font-family: "nyt-franklin";
+  position: relative;
+  color: var(--color-tone-1);
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  padding: 17px 0;
+  border-top: 1px solid var(--gray-4);
+  border-bottom: 1px solid var(--gray-4);
+  margin: 0 auto 20px;
+}
+.Help-module_statsLogin__j0k72 button {
+  border: none;
+  background-color: transparent;
+  font-family: "nyt-franklin";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  padding: 0px 0px 3px;
+}
+.Help-module_statsLogin__j0k72 a,
+.Help-module_statsLogin__j0k72 button {
+  color: var(--blue-2);
+}
+.Help-module_statsLogin__j0k72 .Help-module_loginArrow__H-3mD {
+  text-decoration: none;
+  justify-self: flex-end;
+}
+.Help-module_statsLogin__j0k72 .Help-module_loginText__Osqyn {
+  flex-grow: 2;
+}
+.Help-module_statsLogin__j0k72 .Help-module_statsIcon__pQSyR {
+  margin-right: 10px;
+}
+
+@media (max-width: 295px) {
+  .Help-module_tileContainer__WmMQw {
+    height: 32px;
+  }
+}</style><style type="text/css">.Stats-module_gameStats__ZP1aW {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+}
+.Stats-module_gameStats__ZP1aW h1 {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4px;
+  line-height: 18px;
+  margin-top: 12px;
+}
+.Stats-module_gameStats__ZP1aW .Stats-module_statisticsHeading__9B0IG {
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  letter-spacing: 0.05em;
+}
+
+.Stats-module_statistics__Hke7Z {
+  display: flex;
+}
+
+.Stats-module_statisticContainer__XORTW {
+  flex: 1;
+  margin-left: 12px;
+}
+.Stats-module_statisticContainer__XORTW:last-child {
+  margin-right: 12px;
+}
+
+.Stats-module_statisticContainer__XORTW .Stats-module_statistic__fr8JZ {
+  font-size: 34px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-variant-numeric: proportional-nums;
+  line-height: 36px;
+}
+
+.Stats-module_statistic__fr8JZ.Stats-module_timer__xn2mu {
+  font-variant-numeric: initial;
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: 0.025em;
+}
+
+.Stats-module_statisticContainer__XORTW .Stats-module_label__pLAui {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+}
+
+.Stats-module_guessDistribution__J8Int {
+  width: 80%;
+}
+
+.Stats-module_graphContainer__BlVFU {
+  width: 100%;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.Stats-module_graphContainer__BlVFU .Stats-module_graph__l2LGn {
+  width: 100%;
+  height: 100%;
+  padding-left: 4px;
+}
+
+.Stats-module_graphContainer__BlVFU .Stats-module_graph__l2LGn .Stats-module_graphBar__TvsIP {
+  height: 100%;
+  /* Assume no wins */
+  width: 0%;
+  position: relative;
+  background-color: var(--color-absent);
+  display: flex;
+  justify-content: center;
+}
+
+.Stats-module_graphContainer__BlVFU .Stats-module_graph__l2LGn .Stats-module_graphBar__TvsIP.Stats-module_highlight__fBBiL {
+  background-color: var(--color-correct);
+}
+
+.Stats-module_graphContainer__BlVFU .Stats-module_graph__l2LGn .Stats-module_graphBar__TvsIP.Stats-module_alignRight__29Xhl {
+  justify-content: flex-end;
+  padding-right: 8px;
+}
+
+.Stats-module_graphContainer__BlVFU .Stats-module_graph__l2LGn .Stats-module_numGuesses__aB7UF {
+  font-weight: bold;
+  color: var(--tile-text-color);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.Stats-module_footer__IY-Bt {
+  display: flex;
+  width: 100%;
+}
+
+.Stats-module_countdown__a-cWu {
+  border-right: 1px solid var(--color-tone-1);
+  padding-right: 12px;
+  width: 50%;
+}
+
+.Stats-module_share__kfJ-m {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12px;
+  width: 50%;
+}
+
+.Stats-module_noData__D3wkv {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.Stats-module_shareButton__eNFFD {
+  background-color: var(--key-bg-correct);
+  color: var(--key-evaluated-text-color);
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+  width: 80%;
+  font-size: 20px;
+  height: 52px;
+  filter: brightness(100%);
+}
+
+@media (max-width: 444px) {
+  .Stats-module_shareButton__eNFFD {
+    font-size: 16px;
+  }
+}
+.Stats-module_shareButton__eNFFD:hover {
+  opacity: 0.9;
+}
+
+.Stats-module_shareIconContainer__j2o6K {
+  width: 24px;
+  height: 24px;
+  padding-left: 8px;
+}
+
+.Stats-module_statsBtnLeft__q1PQ8 {
+  justify-content: unset;
+  width: 80%;
+  margin: 12px 0px 20px 15px;
+}
+
+.Stats-module_statsBtnCenter__Kgi5x {
+  margin: 10px;
+}
+
+.Stats-module_statsInfoBtn__WUPls {
+  all: unset;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-bottom: 20px;
+  color: var(--color-tone-10);
+  cursor: pointer;
+}
+
+.Stats-module_promoButton__8dcY3 {
+  border: 1px solid var(--color-tone-1);
+  padding: 10px;
+  border-radius: 105px;
+  background: var(--color-tone-7);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+  text-decoration: none;
+  width: 150px;
+  display: flex;
+  width: 66%;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.Stats-module_promoIcon__1c9qr {
+  width: 25px;
+  height: 25px;
+  background-image: var(--spelling-bee-promo);
+  background-size: 25px;
+  background-position: center;
+  margin-left: 5px;
+}
+
+.Stats-module_promoButtonContainer__xUFtx {
+  border-top: 1px solid var(--color-tone-9);
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  padding-top: 20px;
+}
+
+.Stats-module_ctaContainer__WSxUG {
+  width: 100%;
+}
+
+.Stats-module_guess__3MeYM {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+
+/*----------------
+  A/B TEST STYLES
+------------------*/
+.Stats-module_testGameStats__ourh0 {
+  padding: 32px 16px 16px 16px;
+}
+.Stats-module_testGameStats__ourh0 .Stats-module_statsBtnLeft__q1PQ8 {
+  margin-bottom: 0;
+}
+
+.Stats-module_testTimer__iIrPB {
+  font-family: "nyt-franklin";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.Stats-module_botLink__n0FC- {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-tone-9);
+  text-decoration: none;
+  color: inherit;
+}
+@media (min-width: 500px) {
+  .Stats-module_botLink__n0FC- {
+    padding: 16px 50px;
+  }
+}
+.Stats-module_botLink__n0FC- .Stats-module_botIcon__ovV-- {
+  flex: 0 0 28px;
+  background: var(--wordlebot-walking-icon) no-repeat;
+  width: 28px;
+  height: auto;
+  margin-right: 16px;
+}
+.Stats-module_botLink__n0FC- .Stats-module_botLinkContent__XSODP {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.Stats-module_botLink__n0FC- .Stats-module_botLinkContent__XSODP p {
+  font: 700 16px/20px "nyt-franklin";
+  margin: 0 0 16px;
+}
+.Stats-module_botLink__n0FC- .Stats-module_botLinkContent__XSODP span {
+  font: 400 14px/14px "nyt-franklin";
+  text-align: right;
+  text-decoration: underline;
+}
+.Stats-module_botLink__n0FC- .Stats-module_mobileOnly__l9QaG {
+  display: block;
+}
+@media (min-width: 500px) {
+  .Stats-module_botLink__n0FC- .Stats-module_mobileOnly__l9QaG {
+    display: none;
+  }
+}</style><style type="text/css">.MiniAuthCTA-module_container__jwRHc {
+  border-top: 1px solid var(--color-tone-9);
+  text-align: left;
+  display: flex;
+}
+
+@media (min-width: 500px) {
+  .MiniAuthCTA-module_container__jwRHc {
+    padding: 0px 50px;
+  }
+}
+.MiniAuthCTA-module_icon__FUYJo {
+  padding-top: 10px;
+  padding-right: 2px;
+  height: 31px;
+  width: 31px;
+}
+
+.MiniAuthCTA-module_buttonsContainer__l-mYK {
+  text-align: center;
+  margin: auto 0;
+}
+.MiniAuthCTA-module_buttonsContainer__l-mYK .MiniAuthCTA-module_loginButton__frXaY {
+  all: unset;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-tone-1);
+  cursor: pointer;
+}
+.MiniAuthCTA-module_buttonsContainer__l-mYK .MiniAuthCTA-module_loginButton__frXaY > a {
+  color: inherit;
+}</style><style type="text/css">.AuthCTA-module_container__mFg-m {
+  border-top: 1px solid var(--color-tone-9);
+  text-align: left;
+  display: flex;
+  padding: 10px;
+  padding-bottom: 7px;
+  padding-left: 14px;
+}
+
+@media (min-width: 500px) {
+  .AuthCTA-module_container__mFg-m {
+    padding: 15px 50px 10px 50px;
+  }
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--outline-focus);
+}
+
+.AuthCTA-module_icon__fZT88 {
+  padding-top: 10px;
+}
+
+.AuthCTA-module_promoIcon__2-SRz {
+  width: 25px;
+  height: 25px;
+  background-image: var(--spelling-bee-promo);
+  background-size: 25px;
+  background-position: center;
+  margin-left: 5px;
+}
+
+.AuthCTA-module_textContainer__kIjDX > p {
+  margin: 5px;
+}
+.AuthCTA-module_textContainer__kIjDX .AuthCTA-module_bold__ThmkP {
+  color: var(--color-tone-1);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.AuthCTA-module_textContainer__kIjDX .AuthCTA-module_subText__2Qsw5 {
+  color: var(--color-tone-11);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 12px;
+}
+.AuthCTA-module_textContainer__kIjDX .AuthCTA-module_title__iBYtq {
+  color: #2671dc;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.AuthCTA-module_textContainer__kIjDX .AuthCTA-module_line1__ehobb {
+  margin-bottom: 0;
+}
+.AuthCTA-module_textContainer__kIjDX .AuthCTA-module_line2__3-cVE {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.AuthCTA-module_buttonsContainer__y0b1J {
+  text-align: center;
+  margin-top: 10px;
+}
+.AuthCTA-module_buttonsContainer__y0b1J .AuthCTA-module_moreLink__pAJHo {
+  all: unset;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-tone-11);
+  margin: 10px 20px 20px 20px;
+  cursor: pointer;
+}
+.AuthCTA-module_buttonsContainer__y0b1J .AuthCTA-module_moreLink__pAJHo:focus-visible {
+  outline: 2px solid var(--outline-focus);
+}
+.AuthCTA-module_buttonsContainer__y0b1J .AuthCTA-module_loginButton__0FcEr {
+  background-color: var(--color-tone-7);
+  color: var(--color-tone-1);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  border: 1px solid var(--color-tone-1);
+  border-radius: 55px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 14px 5px;
+}
+.AuthCTA-module_buttonsContainer__y0b1J .AuthCTA-module_loginButton__0FcEr > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: 500px) {
+  .AuthCTA-module_buttonsContainer__y0b1J {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .AuthCTA-module_loginButton__0FcEr {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 499px) {
+  .AuthCTA-module_buttonsContainer__y0b1J {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .AuthCTA-module_loginButton__0FcEr {
+    width: 100%;
+  }
+}
+.AuthCTA-module_promoButton__i3iNK, .AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_sbPlayButton__KULsl {
+  border: 1px solid var(--color-tone-1);
+  padding: 10px;
+  border-radius: 105px;
+  background: var(--color-tone-7);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.AuthCTA-module_shareButton__SsNA6 {
+  background-color: var(--key-bg-correct);
+  color: var(--key-evaluated-text-color);
+  border-radius: 104px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  width: 80%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#AuthCTA-module_shareIcon__x5WtP {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.AuthCTA-module_shareText__o7WL- {
+  color: var(--white);
+}
+
+@media (max-width: 295px) {
+  .AuthCTA-module_promoIcon__2-SRz {
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+  }
+  .AuthCTA-module_shareButton__SsNA6 {
+    font-size: 10px;
+  }
+}
+.AuthCTA-module_bottomSheet__ycB90 {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-tone-7);
+  border-top: 1px solid var(--black-4);
+}
+.AuthCTA-module_bottomSheet__ycB90 .AuthCTA-module_bottomSheetContainer__XnC3J {
+  padding: 16px;
+}
+.AuthCTA-module_bottomSheet__ycB90 .AuthCTA-module_shareButton__SsNA6 {
+  width: 166px;
+  height: 44px;
+}
+.AuthCTA-module_bottomSheet__ycB90 .AuthCTA-module_shareText__o7WL- {
+  font-family: "nyt-franklin";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+}
+.AuthCTA-module_bottomSheet__ycB90 .AuthCTA-module_nextWordle__rBFyE {
+  font-family: "nyt-franklin";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_bottomSheetContainer__XnC3J {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_buttonContainer__bZvL2 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_shareButton__SsNA6,
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_sbPlayButton__KULsl {
+  width: 100%;
+}
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_shareText__o7WL-,
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_sbPlayButton__KULsl {
+  font: 700 13px "nyt-franklin";
+}
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_mediumText__fv5hM {
+  display: none;
+}
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_nextWordle__rBFyE {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.07em;
+  margin-bottom: 12px;
+}
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_nextWordle__rBFyE span {
+  margin-right: 4px;
+}
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_sbPlayButton__KULsl {
+  border: 0;
+  background-color: var(--spellingBeeYellow);
+}
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_sbPlayButton__KULsl span {
+  color: #121212;
+  letter-spacing: normal;
+}
+.AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_promoIcon__2-SRz {
+  width: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 321px) {
+  .AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_sbPlayButton__KULsl {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_shareText__o7WL- {
+    font: 700 16px/20px "nyt-franklin";
+  }
+  .AuthCTA-module_sbButtonFooter__AZUyu .AuthCTA-module_mediumText__fv5hM {
+    display: block;
+  }
+}</style><style type="text/css">.ActivationRegiModal-module_regiModalContainer__tK5ik {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.ActivationRegiModal-module_copyContainer__IHiJV {
+  max-width: 260px;
+  margin-top: 35px;
+}
+.ActivationRegiModal-module_copyContainer__IHiJV .ActivationRegiModal-module_copyHeader__ghv87 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.ActivationRegiModal-module_copyContainer__IHiJV .ActivationRegiModal-module_copyBody__ppgTg {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.ActivationRegiModal-module_loginLink__pGyIf {
+  background-color: var(--color-tone-1);
+  color: var(--color-tone-7);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  box-sizing: border-box;
+  border: 3px solid var(--color-tone-1);
+  border-radius: 55px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 14px 5px;
+  margin: 40px 0 24px;
+  max-width: 340px;
+  width: 100%;
+}
+.ActivationRegiModal-module_loginLink__pGyIf > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ActivationRegiModal-module_statsIcon__VfPA0 {
+  height: 148px;
+  width: 148px;
+}</style><style type="text/css">.Switch-module_container__DiBse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Switch-module_switch__LLcMj {
+  height: 20px;
+  width: 32px;
+  background: var(--color-tone-3);
+  border: none;
+  border-radius: 999px;
+  display: block;
+  position: relative;
+}
+.Switch-module_switch__LLcMj:disabled {
+  opacity: 0.5;
+}
+
+.Switch-module_knob__oRTpP {
+  display: block;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  height: calc(100% - 4px);
+  width: 50%;
+  border-radius: 8px;
+  background: var(--white);
+  transform: translateX(0);
+  transition: transform 0.3s;
+}
+
+.Switch-module_checked__81fA3 .Switch-module_switch__LLcMj {
+  background: var(--color-correct);
+}
+.Switch-module_checked__81fA3 .Switch-module_knob__oRTpP {
+  transform: translateX(calc(100% - 4px));
+}</style><style type="text/css">.Settings-module_setting__IdN-T {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-tone-4);
+  padding: 16px 0;
+}
+.Settings-module_setting__IdN-T a,
+.Settings-module_setting__IdN-T a:visited {
+  color: var(--color-tone-2);
+}
+
+.Settings-module_title__f-cFy {
+  font-size: 18px;
+}
+
+.Settings-module_text__o3woy {
+  padding-right: 8px;
+}
+
+.Settings-module_feedbackLink__eL28L {
+  text-decoration: underline;
+}
+
+.Settings-module_description__rTo9u {
+  font-size: 12px;
+  color: var(--color-tone-2);
+}
+
+.Settings-module_footnote__UtMtH {
+  padding-top: 16px;
+  color: var(--color-tone-2);
+  font-size: 12px;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.Settings-module_container__A7cLq {
+  flex: 1;
+}
+
+@media (min-width: 501px) {
+  .Settings-module_footnote__UtMtH {
+    padding-bottom: 16px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .Settings-module_setting__IdN-T {
+    padding: 16px;
+  }
+}</style><style type="text/css">.Modal-module_modalOverlay__81ZCi {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--opacity-50);
+  z-index: var(--modal-z-index);
+}
+
+.Modal-module_content__s8qUZ {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid var(--color-tone-6);
+  background-color: var(--modal-content-bg);
+  color: var(--color-tone-1);
+  box-shadow: 0 4px 23px 0 rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-height: 100%;
+  overflow-y: auto;
+  -webkit-animation: Modal-module_SlideIn__g77Ik 200ms;
+          animation: Modal-module_SlideIn__g77Ik 200ms;
+  max-width: var(--game-max-width);
+  padding: 16px;
+  box-sizing: border-box;
+}
+.Modal-module_content__s8qUZ:focus {
+  outline: none;
+}
+
+.Modal-module_paddingTop__c-KJb {
+  padding-top: 30px;
+  height: calc(100% - 30px);
+}
+
+.Modal-module_extraPadding__9Yq-E {
+  padding: 32px;
+}
+
+.Modal-module_content__s8qUZ.Modal-module_closing__pgA2s {
+  -webkit-animation: Modal-module_SlideOut__Ev3zj 200ms;
+          animation: Modal-module_SlideOut__Ev3zj 200ms;
+}
+
+.Modal-module_closeIcon__b4z74 {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.Modal-module_closeIcon__b4z74:focus-visible {
+  outline: 2px solid var(--outline-focus);
+}
+
+.Modal-module_heading__oD1Ps {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  display: block;
+}
+
+.Modal-module_newHeading__VPJpL {
+  font-family: "nyt-karnakcondensed";
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: 30px;
+  text-transform: none;
+  text-align: left;
+  margin-bottom: 4px;
+  margin-top: 29px;
+  display: block;
+}
+
+.Modal-module_flexContainer__LRY0x {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 500px) {
+  .Modal-module_modalOverlay__81ZCi {
+    align-items: flex-end;
+  }
+  .Modal-module_content__s8qUZ {
+    min-height: 70%;
+    width: 100%;
+  }
+  .Modal-module_content__s8qUZ.Modal-module_testNoMinHeight__QkjR8 {
+    min-height: initial;
+  }
+  .Modal-module_content__s8qUZ.Modal-module_shortStatsModal__QXJBs {
+    min-height: unset;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .Modal-module_paddingTop__c-KJb .Modal-module_content__s8qUZ {
+    height: 100%;
+  }
+}
+@-webkit-keyframes Modal-module_SlideIn__g77Ik {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes Modal-module_SlideIn__g77Ik {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes Modal-module_SlideOut__Ev3zj {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}
+@keyframes Modal-module_SlideOut__Ev3zj {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}
+.Modal-module_content__s8qUZ.Modal-module_noPadding__ATi3t {
+  padding: 0;
+}</style><style type="text/css">.Nav-module_container__pzbhW {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.Nav-module_container__pzbhW a.Nav-module_navLink__7jXMp {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.Nav-module_container__pzbhW a.Nav-module_navLink__7jXMp:focus-visible {
+  outline: 2px solid var(--outline-focus);
+}
+
+.Nav-module_gameList__izZcv,
+.Nav-module_nytList__Nrzcc {
+  list-style: none;
+  color: var(--color-tone-1);
+  padding: unset;
+  margin: unset;
+}
+
+.Nav-module_nytList__Nrzcc {
+  margin-top: 5px;
+  padding: 12px 0px;
+  border-top: 1px solid #dcdcdc;
+}
+
+.Nav-module_navItem__Kfeh3 {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 40px;
+  font-family: "nyt-franklin-500";
+  font-size: 16px;
+  line-height: 16px;
+  padding-left: 18px;
+  --hover-color: var(--color-nav-hover);
+}
+
+.Nav-module_navItem__Kfeh3:hover {
+  background-color: var(--hover-color);
+}
+
+.Nav-module_navIcon__mgXpj {
+  padding-bottom: 2px;
+  content: "";
+  height: 20px;
+  width: 28px;
+  padding-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: "20px";
+}
+
+.Nav-module_navHeader__KJ4Rd {
+  padding-top: 18px;
+  padding-left: 18px;
+}
+
+.Nav-module_moreText__-hcDZ {
+  font-family: "nyt-franklin";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 32px 0px 24px 0px;
+  padding-left: 18px;
+}
+
+.Nav-module_privacy__H6Jto, .Nav-module_privacyStatic__f2hFM {
+  letter-spacing: 0.5px;
+  font-family: "nyt-franklin-500";
+  margin: 0px 25px 0px 17px;
+  padding: 12px 0px;
+  border-top: 1px solid #dcdcdc;
+  color: var(--color-tone-1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.Nav-module_privacyItem__F1mag {
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: var(--color-tone-1);
+}
+
+.Nav-module_privacyStatic__f2hFM {
+  position: static;
+}</style><style type="text/css">.NavAccount-module_navLoggedIn__QNQGf, .NavAccount-module_navLoggedOut__yVhCA {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  padding: 8px;
+}
+
+.NavAccount-module_navLoggedOut__yVhCA {
+  padding: 16px;
+}
+
+.NavAccount-module_navDrawerHeading__KRAqm {
+  font-family: "nyt-franklin";
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  line-height: 14px;
+  display: block;
+  padding: 0px 10px;
+}
+
+.NavAccount-module_navDrawerAccount__WqYWH {
+  border-top: 1px solid #000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-tone-7);
+  margin-top: 3px;
+}
+
+.NavAccount-module_navProfileAccount__sqIxG {
+  padding: 5px;
+}
+
+.NavAccount-module_navButton__KTP0f, .NavAccount-module_logoutButton__rHSrz, .NavAccount-module_subscribeButton__9oHNa, .NavAccount-module_loginButton__ANAQ0 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  font-family: "nyt-franklin";
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.047em;
+  text-transform: uppercase;
+  height: 36px;
+  border: 1px solid #f4f4f4;
+  border-radius: 3px;
+  color: #fff;
+  border-color: #000;
+  background-color: #000;
+  padding: 1px 33px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.NavAccount-module_navDrawerLink__YqJIR {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  border-left: 4px solid transparent;
+  padding: 0 16px 0 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.NavAccount-module_navDrawerLink__YqJIR:hover {
+  background-color: var(--color-nav-hover);
+}
+
+.NavAccount-module_loginButton__ANAQ0 {
+  color: #000;
+  border-color: #000;
+  background-color: #fff;
+  margin-left: 8px;
+}
+
+.NavAccount-module_loginButton__ANAQ0:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.NavAccount-module_subscribeButton__9oHNa {
+  color: #fff;
+  background-color: #000;
+}
+
+.NavAccount-module_subscribeButton__9oHNa:hover {
+  background-color: #797987;
+  border: none;
+}
+
+.NavAccount-module_logoutButton__rHSrz {
+  color: var(--color-tone-1);
+  background-color: var(--color-tone-7);
+  border: 1px solid var(--color-tone-1);
+  border-radius: 3px;
+}
+
+.NavAccount-module_logoutButton__rHSrz:hover {
+  background-color: #ebebeb;
+}
+
+@media (max-height: 800px) {
+  .NavAccount-module_navDrawerAccount__WqYWH {
+    position: unset;
+  }
+}</style><style type="text/css">.NavModal-module_overlayNav__3y8p3 {
+  display: flex;
+  justify-content: left;
+  align-items: unset;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: var(--modal-z-index);
+  background-color: transparent;
+}
+.NavModal-module_overlayNav__3y8p3:focus {
+  outline: none;
+}
+
+.NavModal-module_contentNav__wMSAL {
+  position: relative;
+  border: 1px solid var(--color-tone-6);
+  background-color: var(--modal-content-bg);
+  color: var(--color-tone-1);
+  overflow-y: auto;
+  -webkit-animation: NavModal-module_SlideRight__DNLx- 200ms;
+          animation: NavModal-module_SlideRight__DNLx- 200ms;
+  max-width: var(--game-max-width);
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 0px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.15);
+  max-height: calc(100% - var(--header-height) - 1px);
+  margin-top: calc(var(--header-height) + 1px);
+  padding: 0px;
+}
+
+@media (min-width: 415px) {
+  .NavModal-module_contentNav__wMSAL {
+    width: 375px;
+  }
+}
+.NavModal-module_contentNav__wMSAL.NavModal-module_closingNav__OIIRY {
+  -webkit-animation: NavModal-module_SlideLeft__7Veo2 200ms;
+          animation: NavModal-module_SlideLeft__7Veo2 200ms;
+}
+
+.NavModal-module_closeIconNav__2gqUi {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.NavModal-module_closeIconNav__2gqUi:focus-visible {
+  outline: 2px solid var(--outline-focus);
+}
+
+@-webkit-keyframes NavModal-module_SlideRight__DNLx- {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes NavModal-module_SlideRight__DNLx- {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes NavModal-module_SlideLeft__7Veo2 {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+@keyframes NavModal-module_SlideLeft__7Veo2 {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}</style><style type="text/css">.Explainer-module_title__-DKFu {
+  font-family: "nyt-franklin";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 10px;
+  color: var(--color-tone-1);
+}
+
+.Explainer-module_containerLink__CFd3e {
+  padding: 30px;
+}
+.Explainer-module_containerLink__CFd3e p:last-child {
+  font-weight: 700;
+}
+
+.Explainer-module_containerProblems__8fCRH {
+  padding: 30px;
+}
+
+.Explainer-module_containerLink__CFd3e,
+.Explainer-module_containerProblems__8fCRH {
+  padding-top: 14px;
+}
+
+.Explainer-module_explainerFooterText__ZeeBX {
+  margin: 30px;
+  padding-top: 30px;
+  border-top: 1px solid var(--gray-2);
+  font-size: 15px;
+  line-height: 130%;
+}
+
+.Explainer-module_text__keVaW {
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin-left: 10px;
+  color: var(--color-tone-1);
+}
+.Explainer-module_text__keVaW > a {
+  color: var(--linkBlue);
+}
+
+.Explainer-module_statsLinkContainer__1PALX {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Explainer-module_actionButton__-bk41, .Explainer-module_helpButton__RRMA3, .Explainer-module_loginButton__XupvV {
+  height: 44px;
+  border-radius: 104px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 14px;
+  font-size: 14px;
+  text-align: center;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+.Explainer-module_actionButton__-bk41:last-child, .Explainer-module_helpButton__RRMA3:last-child, .Explainer-module_loginButton__XupvV:last-child {
+  margin-top: 14px;
+}
+
+.Explainer-module_loginButton__XupvV {
+  background: var(--color-tone-1);
+  color: var(--color-tone-7);
+}
+
+.Explainer-module_helpButton__RRMA3 {
+  background: var(--color-tone-7);
+  color: var(--color-tone-1);
+  border: 1px solid var(--color-tone-1);
+}
+
+.Explainer-module_gamesIcon__spKfI {
+  width: 95px;
+  height: 18px;
+}
+
+.Explainer-module_headerNew__SaqiR {
+  padding: 15px 0px;
+}
+.Explainer-module_headerNew__SaqiR > p {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.Explainer-module_close__F3zLu {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  position: absolute;
+  right: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: 0;
+  margin-right: 30px;
+}</style><style type="text/css">.StatsLink-module_container__G4oYM {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.StatsLink-module_header__8CPRA {
+  align-items: center;
+  border-bottom: 1px solid var(--gray-2);
+  display: flex;
+  height: 3em;
+  justify-content: center;
+}
+
+.StatsLink-module_logo__Kx2s- {
+  position: relative;
+  top: 5px;
+}
+
+.StatsLink-module_content__7z9K3 {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  padding-top: 6em;
+}
+
+.StatsLink-module_statsIconWrapper__lzf6R {
+  position: relative;
+  height: 12em;
+  width: 12em;
+  margin-bottom: 2em;
+}
+
+.StatsLink-module_statsFailureBadge__qQmvE {
+  position: absolute;
+  height: 2.75em;
+  width: 2.75em;
+  top: -0.75em;
+  right: -0.75em;
+}
+
+.StatsLink-module_statsIcon__-nU-- {
+  height: 12em;
+  width: 12em;
+}
+
+.StatsLink-module_headingWrapper__DV4V8 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.StatsLink-module_heading__8G3Jk {
+  font-family: nyt-cheltenham;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  line-height: 30px;
+}
+
+.StatsLink-module_paragraphWrapper__5sxeO {
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+
+.StatsLink-module_paragraph__Q-baL {
+  font-family: nyt-franklin;
+  font-size: 1em;
+  margin: 0;
+}
+
+.StatsLink-module_email__xzzCz {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.StatsLink-module_button__F7k0J {
+  background: var(--black-2);
+  border: none;
+  border-radius: 3px;
+  color: var(--white);
+  font-family: nyt-franklin;
+  font-weight: 600;
+  font-size: 1em;
+  height: 3em;
+  width: 100%;
+}
+
+.StatsLink-module_footer__Qxrmi {
+  padding-top: 2.5em;
+  text-align: center;
+}
+
+.StatsLink-module_buttonAsLink__kErTh {
+  all: unset;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--black-3);
+  font-family: nyt-franklin;
+}
+
+.StatsLink-module_link__YBHY7 {
+  font-family: nyt-franklin;
+  font-size: 1em;
+  color: var(--black-3);
+}
+
+.StatsLink-module_linkPrompt__VzIFH {
+  color: var(--black-3);
+}</style><style type="text/css">.Page-module_page__YqrWy {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  background-color: var(--color-background);
+  -webkit-animation: Page-module_SlideIn__T-Lu3 100ms linear;
+          animation: Page-module_SlideIn__T-Lu3 100ms linear;
+  z-index: var(--page-z-index);
+}
+.Page-module_page__YqrWy.Page-module_closing__uVg4f {
+  -webkit-animation: Page-module_SlideOut__U2w2g 150ms linear;
+          animation: Page-module_SlideOut__U2w2g 150ms linear;
+}
+.Page-module_page__YqrWy header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Page-module_page__YqrWy h1 {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.Page-module_pageNew__YeTYy {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  background-color: var(--color-background);
+  -webkit-animation: Page-module_SlideIn__T-Lu3 100ms linear;
+          animation: Page-module_SlideIn__T-Lu3 100ms linear;
+  z-index: var(--page-z-index);
+  overflow-y: auto;
+  display: flex;
+}
+.Page-module_pageNew__YeTYy .Page-module_gamesIcon__VFFP9 {
+  width: 95px;
+  height: 18px;
+}
+.Page-module_pageNew__YeTYy .Page-module_close__D3gaa {
+  margin-right: 30px;
+}
+.Page-module_pageNew__YeTYy.Page-module_closing__uVg4f {
+  -webkit-animation: Page-module_SlideOut__U2w2g 150ms linear;
+          animation: Page-module_SlideOut__U2w2g 150ms linear;
+}
+.Page-module_pageNew__YeTYy.Page-module_noDarkMode__0G0q5 {
+  background-color: var(--white);
+  color: black;
+}
+.Page-module_pageNew__YeTYy.Page-module_noDarkMode__0G0q5 > .Page-module_content__hwN4l {
+  color: black;
+}
+
+.Page-module_pageFixed__Dbnxx {
+  position: fixed;
+}
+
+.Page-module_headerNew__7DIpY {
+  padding: 15px 0px;
+}
+.Page-module_headerNew__7DIpY > p {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.Page-module_content__hwN4l {
+  position: relative;
+  color: var(--color-tone-1);
+  padding: 0 32px;
+  max-width: var(--game-max-width);
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Page-module_contentContainer__KZJPh {
+  height: 100%;
+}
+
+.Page-module_close__D3gaa {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  position: absolute;
+  right: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .Page-module_content__hwN4l {
+    max-width: 100%;
+    padding: 0;
+  }
+  .Page-module_close__D3gaa {
+    padding: 0 16px;
+  }
+}
+@-webkit-keyframes Page-module_SlideIn__T-Lu3 {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes Page-module_SlideIn__T-Lu3 {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes Page-module_SlideOut__U2w2g {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}
+@keyframes Page-module_SlideOut__U2w2g {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}</style><style type="text/css">.ToastContainer-module_toaster__QDad3 {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  pointer-events: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#ToastContainer-module_gameToaster__yjzPn {
+  z-index: var(--toast-z-index);
+}
+
+#ToastContainer-module_systemToaster__fIZdf {
+  z-index: var(--system-toast-z-index);
+}</style><style type="text/css">.Toast-module_toast__Woeb- {
+  position: relative;
+  margin: 16px;
+  background-color: var(--color-tone-8);
+  color: var(--color-tone-7);
+  padding: 13px;
+  border: none;
+  border-radius: 4px;
+  opacity: 1;
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.Toast-module_win__7-aZX {
+  background-color: var(--color-correct);
+  color: var(--tile-text-color);
+}
+
+.Toast-module_fade__uPhAg {
+  opacity: 0;
+}</style><style type="text/css">.Error-module_container__BMcmT {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - var(--header-height) - 1px);
+  left: 0;
+  justify-content: center;
+  background-color: var(--error-background);
+  -webkit-animation: Error-module_SlideIn__9w2wl 100ms linear;
+          animation: Error-module_SlideIn__9w2wl 100ms linear;
+  z-index: var(--error-z-index);
+}
+
+.Error-module_errorContainer__5f0-O {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  position: relative;
+  top: 166px;
+  font-family: "nyt-franklin";
+}
+
+.Error-module_errorText__aINs5 {
+  font-family: "nyt-franklin-400";
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-tone-1);
+}
+
+.Error-module_errorTilesContainer__7SZD5 {
+  width: 208px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.Error-module_errorTiles__miCkr {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border: 1.27px solid var(--lightGray);
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.Error-module_backButton__qhfix {
+  margin-top: 24px;
+  border-radius: 24px;
+  width: 150px;
+  height: 48px;
+  font-family: "nyt-franklin-600";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-color: var(--color-tone-1);
+  box-shadow: none;
+  border: none;
+  color: var(--color-tone-7);
+}
+
+@-webkit-keyframes Error-module_SlideIn__9w2wl {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes Error-module_SlideIn__9w2wl {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes Error-module_SlideOut__uVOvc {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}
+@keyframes Error-module_SlideOut__uVOvc {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}
+.Error-module_errorBannerContainer__kpuAB {
+  background-color: #323232;
+  color: white;
+  font-size: 14px;
+  height: auto;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  font-family: "nyt-franklin";
+}
+.Error-module_errorBannerContainer__kpuAB p {
+  font-weight: 400;
+  margin: 5px 5px 5px 10px;
+}
+.Error-module_errorBannerContainer__kpuAB p.Error-module_errorTitle__-iN5F {
+  font-weight: 700;
+}
+.Error-module_errorBannerContainer__kpuAB .Error-module_close__M-EdG {
+  color: white;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 5px 5px 0px 0px;
+}
+.Error-module_errorBannerContainer__kpuAB .Error-module_errorRow__35lMF {
+  display: flex;
+  justify-content: space-between;
+}
+.Error-module_errorBannerContainer__kpuAB.Error-module_hideBanner__dI2kJ {
+  opacity: 0;
+  height: 0;
+}</style><style type="text/css">.Key-module_key__Rv-Vp {
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  margin: 0 6px 0 0;
+  height: 58px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: var(--key-bg);
+  color: var(--key-text-color);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+.Key-module_key__Rv-Vp:focus-visible {
+  outline: 2px solid var(--outline-focus);
+}
+.Key-module_key__Rv-Vp:last-of-type {
+  margin: 0;
+}
+.Key-module_key__Rv-Vp[data-state=correct] {
+  background-color: var(--key-bg-correct);
+  color: var(--key-evaluated-text-color);
+}
+.Key-module_key__Rv-Vp[data-state=present] {
+  background-color: var(--key-bg-present);
+  color: var(--key-evaluated-text-color);
+}
+.Key-module_key__Rv-Vp[data-state=absent] {
+  background-color: var(--key-bg-absent);
+  color: var(--key-evaluated-text-color);
+}
+.Key-module_key__Rv-Vp.Key-module_fade__37Hk8 {
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.Key-module_half__ljsj8 {
+  flex: 0.5;
+}
+
+.Key-module_one__HBOou {
+  flex: 1;
+}
+
+.Key-module_oneAndAHalf__K6JBY {
+  flex: 1.5;
+  font-size: 12px;
+}</style><style type="text/css">.Keyboard-module_keyboard__1HSnn {
+  height: var(--keyboard-height);
+  margin: 0 8px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.Keyboard-module_row__YWe5w {
+  display: flex;
+  width: 100%;
+  margin: 0 auto 8px;
+  /* https://stackoverflow.com/questions/46167604/ios-html-disable-double-tap-to-zoom */
+  touch-action: manipulation;
+}</style><style type="text/css">.Ad-module_adContainer__6bb5H {
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: inset 0 0 60px -10px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.Ad-module_adContainer__6bb5H > *:first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Ad-module_adContainer__6bb5H:empty {
+  border: none;
+}
+
+.Ad-module_hasAdLabel__IgkWa:before {
+  content: "advertisement";
+  color: #bbb;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}</style><style type="text/css">.App-module_gameContainer__EvHiJ {
+  position: relative;
+}
+
+.App-module_game__NSc-J {
+  width: 100%;
+  max-width: var(--game-max-width);
+  margin: 0 auto;
+  height: calc(100% - var(--header-height));
+  display: flex;
+  flex-direction: column;
+}
+
+.pz-offline-ticker {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  font-weight: bold;
+}
+.pz-offline-ticker svg path {
+  fill: var(--white);
+}</style><style type="text/css">.NavIcon-module_burgerSvg__WKh0A {
+  width: 20px;
+}
+
+@media (min-width: 1024px) {
+  .NavIcon-module_burgerSvg__WKh0A {
+    width: 24px;
+  }
+}</style><style type="text/css">.AppHeader-module_appHeader__1Ehyv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding: 0px var(--header-padding-x);
+  height: var(--header-height);
+  color: var(--color-tone-1);
+  border-bottom: 1px solid var(--color-tone-4);
+}
+.AppHeader-module_appHeader__1Ehyv button:focus-visible {
+  outline: 2px solid var(--outline-focus);
+}
+.AppHeader-module_appHeader__1Ehyv button.AppHeader-module_icon__x7b46 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.AppHeader-module_appHeader__1Ehyv button.AppHeader-module_icon__x7b46:last-child {
+  padding-right: 0;
+}
+
+.AppHeader-module_appHeader__1Ehyv .AppHeader-module_title__6sqs- {
+  flex-grow: 2;
+  font-family: "nyt-karnakcondensed";
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  position: relative;
+}
+
+.AppHeader-module_menuLeft__iErDO {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.AppHeader-module_menuRight__jUeYn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#AppHeader-module_navButton__fB5nf {
+  padding-top: 2px;
+  padding-left: 0px;
+  padding-right: 13px;
+}
+
+@media (min-width: 1024px) {
+  .AppHeader-module_appHeader__1Ehyv .AppHeader-module_title__6sqs- {
+    text-align: center;
+    font-size: 36px;
+  }
+  .AppHeader-module_appHeader__1Ehyv button.AppHeader-module_icon__x7b46 {
+    padding: 0 6px;
+  }
+}
+@media (min-width: 768px) {
+  .AppHeader-module_appHeader__1Ehyv .AppHeader-module_title__6sqs- {
+    text-align: center;
+    font-size: 32px;
+  }
+  .AppHeader-module_appHeader__1Ehyv .AppHeader-module_menuLeft__iErDO,
+.AppHeader-module_appHeader__1Ehyv .AppHeader-module_menuRight__jUeYn {
+    width: 120px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .AppHeader-module_appHeader__1Ehyv .AppHeader-module_title__6sqs- {
+    font-size: 36px;
+  }
+}
+@media (min-width: 768px) {
+  #AppHeader-module_navButton__fB5nf {
+    padding-top: 2px;
+    padding-left: 0px;
+  }
+}</style><script src="./Wordle - The New York Times3_files/gpt.js" async=""></script><meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script src="./Wordle - The New York Times3_files/pubads_impl_2022111501.js" async=""></script><link rel="preload" href="./Wordle - The New York Times3_files/f.txt" as="script"><script type="text/javascript" src="./Wordle - The New York Times3_files/f.txt"></script><meta http-equiv="origin-trial" content="A751Xsk4ZW3DVQ8WZng2Dk5s3YzAyqncTzgv+VaE6wavgTY0QHkDvUTET1o7HanhuJO8lgv1Vvc88Ij78W1FIAAAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A751Xsk4ZW3DVQ8WZng2Dk5s3YzAyqncTzgv+VaE6wavgTY0QHkDvUTET1o7HanhuJO8lgv1Vvc88Ij78W1FIAAAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" src="./Wordle - The New York Times3_files/show-ads.js"></script></head><body class=""><script src="./Wordle - The New York Times3_files/cookie-notice-v2.1.2.min.js" async=""></script><script src="./Wordle - The New York Times3_files/gtm(1).js" async=""></script><div><div class="MomentSystem-module_moment__94wOL"><div class="App-module_gameContainer__EvHiJ" style="height: 100%;"><header class="AppHeader-module_appHeader__1Ehyv wordle-app-header"><div class="AppHeader-module_menuLeft__iErDO"><button type="button" id="AppHeader-module_navButton__fB5nf" class="AppHeader-module_icon__x7b46" aria-label="Navigation menu. Click for links to other NYT Games and our Privacy Policy."><svg class="NavIcon-module_burgerSvg__WKh0A" width="20" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.172974" width="20" height="3" rx="1.5" fill="var(--color-tone-1)"></rect><rect x="0.172974" y="7" width="20" height="3" rx="1.5" fill="var(--color-tone-1)"></rect><rect x="0.172974" y="14" width="20" height="3" rx="1.5" fill="var(--color-tone-1)"></rect></svg></button></div><div class="AppHeader-module_title__6sqs-">Wordle</div><div class="AppHeader-module_menuRight__jUeYn"><button type="button" id="help-button" class="AppHeader-module_icon__x7b46" aria-label="Help"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="4 4 24 24" width="28" class="game-icon" data-testid="icon-help"><path fill="var(--color-tone-1)" d="M14.8333 23H17.1666V20.6667H14.8333V23ZM15.9999 4.33334C9.55992 4.33334 4.33325 9.56001 4.33325 16C4.33325 22.44 9.55992 27.6667 15.9999 27.6667C22.4399 27.6667 27.6666 22.44 27.6666 16C27.6666 9.56001 22.4399 4.33334 15.9999 4.33334ZM15.9999 25.3333C10.8549 25.3333 6.66659 21.145 6.66659 16C6.66659 10.855 10.8549 6.66668 15.9999 6.66668C21.1449 6.66668 25.3333 10.855 25.3333 16C25.3333 21.145 21.1449 25.3333 15.9999 25.3333ZM15.9999 9.00001C13.4216 9.00001 11.3333 11.0883 11.3333 13.6667H13.6666C13.6666 12.3833 14.7166 11.3333 15.9999 11.3333C17.2833 11.3333 18.3333 12.3833 18.3333 13.6667C18.3333 16 14.8333 15.7083 14.8333 19.5H17.1666C17.1666 16.875 20.6666 16.5833 20.6666 13.6667C20.6666 11.0883 18.5783 9.00001 15.9999 9.00001Z"></path></svg></button><button type="button" id="statistics-button" class="AppHeader-module_icon__x7b46" aria-label="Statistics"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="4 4 24 24" width="28" class="game-icon" data-testid="icon-statistics"><path fill="var(--color-tone-1)" d="M20.6666 14.8333V5.5H11.3333V12.5H4.33325V26.5H27.6666V14.8333H20.6666ZM13.6666 7.83333H18.3333V24.1667H13.6666V7.83333ZM6.66659 14.8333H11.3333V24.1667H6.66659V14.8333ZM25.3333 24.1667H20.6666V17.1667H25.3333V24.1667Z"></path></svg></button><button type="button" id="settings-button" class="AppHeader-module_icon__x7b46" aria-label="Settings"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="4 4 24 24" width="28" class="game-icon" data-testid="icon-settings"><path fill="var(--color-tone-1)" d="M25.52 17.2534C25.5733 16.8534 25.6 16.44 25.6 16C25.6 15.5734 25.5733 15.1467 25.5067 14.7467L28.2133 12.64C28.4533 12.4534 28.52 12.0934 28.3733 11.8267L25.8133 7.40004C25.6533 7.10671 25.32 7.01338 25.0267 7.10671L21.84 8.38671C21.1733 7.88004 20.4667 7.45338 19.68 7.13338L19.2 3.74671C19.1467 3.42671 18.88 3.20004 18.56 3.20004H13.44C13.12 3.20004 12.8666 3.42671 12.8133 3.74671L12.3333 7.13338C11.5467 7.45338 10.8267 7.89338 10.1733 8.38671L6.98665 7.10671C6.69332 7.00004 6.35998 7.10671 6.19998 7.40004L3.65332 11.8267C3.49332 12.1067 3.54665 12.4534 3.81332 12.64L6.51998 14.7467C6.45332 15.1467 6.39998 15.5867 6.39998 16C6.39998 16.4134 6.42665 16.8534 6.49332 17.2534L3.78665 19.36C3.54665 19.5467 3.47998 19.9067 3.62665 20.1734L6.18665 24.6C6.34665 24.8934 6.67998 24.9867 6.97332 24.8934L10.16 23.6134C10.8267 24.12 11.5333 24.5467 12.32 24.8667L12.8 28.2534C12.8667 28.5734 13.12 28.8 13.44 28.8H18.56C18.88 28.8 19.1467 28.5734 19.1867 28.2534L19.6667 24.8667C20.4533 24.5467 21.1733 24.12 21.8267 23.6134L25.0133 24.8934C25.3067 25 25.64 24.8934 25.8 24.6L28.36 20.1734C28.52 19.88 28.4533 19.5467 28.2 19.36L25.52 17.2534ZM16 20.8C13.36 20.8 11.2 18.64 11.2 16C11.2 13.36 13.36 11.2 16 11.2C18.64 11.2 20.8 13.36 20.8 16C20.8 18.64 18.64 20.8 16 20.8Z"></path></svg></button></div></header><div class="App-module_game__NSc-J" id="wordle-app-game"><div class="Board-module_boardContainer__cKb-C"><div class="Board-module_board__lbzlf" style="width: 350px; height: 420px;"><div class="Row-module_row__dEHfN" role="group" aria-label="Row 1"><div class="" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="h absent" aria-live="polite" data-state="absent" data-animation="idle" data-testid="tile">h</div></div><div class="" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="a absent" aria-live="polite" data-state="absent" data-animation="idle" data-testid="tile">a</div></div><div class="" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="t present" aria-live="polite" data-state="present" data-animation="idle" data-testid="tile">t</div></div><div class="" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="e absent" aria-live="polite" data-state="absent" data-animation="idle" data-testid="tile">e</div></div><div class="" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="s present" aria-live="polite" data-state="present" data-animation="idle" data-testid="tile">s</div></div></div><div class="Row-module_row__dEHfN" role="group" aria-label="Row 2"><div class="" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="s correct" aria-live="polite" data-state="correct" data-animation="idle" data-testid="tile">s</div></div><div class="" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="t correct" aria-live="polite" data-state="correct" data-animation="idle" data-testid="tile">t</div></div><div class="" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="i absent" aria-live="polite" data-state="absent" data-animation="idle" data-testid="tile">i</div></div><div class="" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="l absent" aria-live="polite" data-state="absent" data-animation="idle" data-testid="tile">l</div></div><div class="" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="l absent" aria-live="polite" data-state="absent" data-animation="idle" data-testid="tile">l</div></div></div><div class="Row-module_row__dEHfN" role="group" aria-label="Row 3"><div class="" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="s correct" aria-live="polite" data-state="correct" data-animation="idle" data-testid="tile">s</div></div><div class="" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="t correct" aria-live="polite" data-state="correct" data-animation="idle" data-testid="tile">t</div></div><div class="" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="o absent" aria-live="polite" data-state="absent" data-animation="idle" data-testid="tile">o</div></div><div class="" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="n absent" aria-live="polite" data-state="absent" data-animation="idle" data-testid="tile">n</div></div><div class="" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="y correct" aria-live="polite" data-state="correct" data-animation="idle" data-testid="tile">y</div></div></div><div class="Row-module_row__dEHfN" role="group" aria-label="Row 4"><div class="Row-module_win__NF7uy" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="s correct" aria-live="polite" data-state="correct" data-animation="idle" data-testid="tile">s</div></div><div class="Row-module_win__NF7uy" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="t correct" aria-live="polite" data-state="correct" data-animation="idle" data-testid="tile">t</div></div><div class="Row-module_win__NF7uy" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="u correct" aria-live="polite" data-state="correct" data-animation="idle" data-testid="tile">u</div></div><div class="Row-module_win__NF7uy" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="d correct" aria-live="polite" data-state="correct" data-animation="idle" data-testid="tile">d</div></div><div class="Row-module_win__NF7uy" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="y correct" aria-live="polite" data-state="correct" data-animation="idle" data-testid="tile">y</div></div></div><div class="Row-module_row__dEHfN" role="group" aria-label="Row 5"><div class="" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="empty" aria-live="polite" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="empty" aria-live="polite" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="empty" aria-live="polite" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="empty" aria-live="polite" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="empty" aria-live="polite" data-state="empty" data-animation="idle" data-testid="tile"></div></div></div><div class="Row-module_row__dEHfN" role="group" aria-label="Row 6"><div class="" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="empty" aria-live="polite" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="empty" aria-live="polite" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="empty" aria-live="polite" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="empty" aria-live="polite" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" role="img" aria-roledescription="tile" aria-label="empty" aria-live="polite" data-state="empty" data-animation="idle" data-testid="tile"></div></div></div></div></div><div class="Keyboard-module_keyboard__1HSnn" role="group" aria-label="Keyboard"><div class="Keyboard-module_row__YWe5w"><button type="button" data-key="q" class="Key-module_key__Rv-Vp">q</button><button type="button" data-key="w" class="Key-module_key__Rv-Vp">w</button><button type="button" data-key="e" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent" aria-label="e absent">e</button><button type="button" data-key="r" class="Key-module_key__Rv-Vp">r</button><button type="button" data-key="t" class="Key-module_key__Rv-Vp" data-state="correct" aria-label="t correct">t</button><button type="button" data-key="y" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="correct" aria-label="y correct">y</button><button type="button" data-key="u" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="correct" aria-label="u correct">u</button><button type="button" data-key="i" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent" aria-label="i absent">i</button><button type="button" data-key="o" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent" aria-label="o absent">o</button><button type="button" data-key="p" class="Key-module_key__Rv-Vp">p</button></div><div class="Keyboard-module_row__YWe5w"><div data-testid="spacer" class="Key-module_half__ljsj8"></div><button type="button" data-key="a" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent" aria-label="a absent">a</button><button type="button" data-key="s" class="Key-module_key__Rv-Vp" data-state="correct" aria-label="s correct">s</button><button type="button" data-key="d" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="correct" aria-label="d correct">d</button><button type="button" data-key="f" class="Key-module_key__Rv-Vp">f</button><button type="button" data-key="g" class="Key-module_key__Rv-Vp">g</button><button type="button" data-key="h" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent" aria-label="h absent">h</button><button type="button" data-key="j" class="Key-module_key__Rv-Vp">j</button><button type="button" data-key="k" class="Key-module_key__Rv-Vp">k</button><button type="button" data-key="l" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent" aria-label="l absent">l</button><div data-testid="spacer" class="Key-module_half__ljsj8"></div></div><div class="Keyboard-module_row__YWe5w"><button type="button" data-key="↵" class="Key-module_key__Rv-Vp Key-module_oneAndAHalf__K6JBY">enter</button><button type="button" data-key="z" class="Key-module_key__Rv-Vp">z</button><button type="button" data-key="x" class="Key-module_key__Rv-Vp">x</button><button type="button" data-key="c" class="Key-module_key__Rv-Vp">c</button><button type="button" data-key="v" class="Key-module_key__Rv-Vp">v</button><button type="button" data-key="b" class="Key-module_key__Rv-Vp">b</button><button type="button" data-key="n" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent" aria-label="n absent">n</button><button type="button" data-key="m" class="Key-module_key__Rv-Vp">m</button><button type="button" data-key="←" aria-label="backspace" class="Key-module_key__Rv-Vp Key-module_oneAndAHalf__K6JBY"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="game-icon" data-testid="icon-backspace"><path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path></svg></button></div></div><div tabindex="0" class="ToastContainer-module_toaster__QDad3" id="ToastContainer-module_gameToaster__yjzPn"></div><div tabindex="0" class="ToastContainer-module_toaster__QDad3" id="ToastContainer-module_systemToaster__fIZdf"></div></div></div></div></div><script type="text/javascript" id="">(function(){var c=window.nytAnalytics=window.nytAnalytics||{},h=function(a){return 10>a?"0"+a:a},m="Sunday Monday Tuesday Wednesday Thursday Friday Saturday".split(" "),n="January February March April May June July August September October November December".split(" ");c.formattedDates=c.formattedDates||{};c.formatDates=function(a,b){var d=this.formattedDates;if(!a||!b)return"";if("undefined"===typeof d[a]){var e=new Date(a);if("Invalid Date"==e)return"";var l=e,p=l.setTime;var f=e;var k=-5;if(10>
+f.getUTCMonth()&&2<f.getUTCMonth())k=-4;else if(2===f.getUTCMonth()){var g=new Date(f.getUTCFullYear(),2,8,-5);g=0===g.getUTCDay()?8:15-g.getUTCDay();if(f.getUTCDate()>g||f.getUTCDate()===g&&6<f.getUTCHours())k=-4}else 10===f.getUTCMonth()&&(f.getUTCFullYear(),g=0===g.getUTCDay()?1:8-g.getUTCDay(),f.getUTCDate()<g||f.getUTCDate()===g&&7>f.getUTCHours())&&(k=-4);f=k;p.call(l,a+36E5*f);d[a]={year:e.getUTCFullYear(),date:[e.getUTCFullYear(),h(e.getUTCMonth()+1),h(e.getUTCDate()),h(e.getUTCHours())].join("-"),
+dateAlone:[e.getUTCFullYear(),h(e.getUTCMonth()+1),h(e.getUTCDate())].join("-"),day:m[e.getUTCDay()],hours:h(e.getUTCHours()),month:n[e.getUTCMonth()]}}return d[a][b]};c.resetPage=function(){this.currQuartile=this.maxQuartile=0;this.scrollComplete=this.scrollStart=!1;this.activeTime=0;this.maxViewport={}};c.resetPage();c.hitQuartile=function(a){var b=this.getData("viewport.documentHeight")||document.getElementById("app").clientHeight;b/=4;this.currQuartile=25*Math.floor(a/b);return this.currQuartile>
+this.maxQuartile?(this.maxQuartile=this.currQuartile,!0):!1};c.getMaxViewport=function(a){var b=this.maxViewport;if(!b.scrollTop||!b.height||!b.width||(a.scrollTop+a.height)*a.width>(b.scrollTop+b.height)*b.width)this.maxViewport=JSON.parse(JSON.stringify(a));return this.maxViewport};c.pagemeta=function(){var a,b={},d=document.getElementsByTagName("meta");for(a=d.length-1;0<=a;a--)b[d[a].name]=d[a].content;return b}();c.heartbeat=function(a){this.activeTime=this.activeTime||0;this.activeTime+=a.heartbeatInterval;
+(a=a.heartbeatInterval&&(3E4>=this.activeTime||12E4>=this.activeTime&&0===this.activeTime%(2*a.heartbeatInterval)||3E5>=this.activeTime&&0===this.activeTime%(4*a.heartbeatInterval)||3E5<this.activeTime&&18E5>=this.activeTime&&0===this.activeTime%(6*a.heartbeatInterval)))&&"function"==typeof nyt_et&&nyt_et("send",{subject:"page_update",activeTime:this.activeTime,gtm:google_tag_manager["GTM-P528B3"].macro(14)})};c.interaction=function(a){if("function"===typeof nyt_et){var b={subject:"interaction",gtm:google_tag_manager["GTM-P528B3"].macro(15)};
+a.eventData&&(b.eventData=a.eventData);a.module&&(b.module=a.module,"object"===typeof b.module.element&&"undefined"!==typeof b.module.element.label&&(b.module.element.label=b.module.element.label.toString()));a.card&&(b.card=JSON.parse(JSON.stringify(a.card)),"string"===typeof b.card.index&&(/^\d+$/.test(b.card.index)?b.card.index=parseInt(b.card.index,10):/\w+/.test(b.card.index)&&(b.card.index=null)));a.block&&(b.block=a.block);a.newsletter&&(b.newsletter=a.newsletter);a.ad&&(b.ad=a.ad);a["package"]&&
+(b["package"]=a["package"]);a.item&&(b.item=a.item);a.impression_id&&(b.impression_id=a.impression_id);nyt_et("send",JSON.parse(JSON.stringify(b)))}};c.performance=function(a){"function"==typeof nyt_et&&(a={subject:"page_update",performance:a.performance,gtm:google_tag_manager["GTM-P528B3"].macro(16)},c.exitPriority?(a.eventData={type:"ob_click"},nyt_et("send",a)):nyt_et(a))};c.impression=function(a,b){var d={event:"impression"},e=!1;a.module&&(d.module=JSON.parse(JSON.stringify(a.module)),e=!0);a.card&&(d.card=JSON.parse(JSON.stringify(a.card)),
+"string"===typeof d.card.index&&(/^\d+$/.test(d.card.index)?d.card.index=parseInt(d.card.index,10):/\w+/.test(d.card.index)&&(d.card.index=null)),e=!0);a.block&&(d.block=JSON.parse(JSON.stringify(a.block)),e=!0);a.eventData&&(d.eventData=JSON.parse(JSON.stringify(a.eventData)),e=!0);a.ad&&(d.ad=JSON.parse(JSON.stringify(a.ad)),e=!0);a.newsletter&&(d.newsletter=JSON.parse(JSON.stringify(a.newsletter)),e=!0);a.container&&(d.container=JSON.parse(JSON.stringify(a.container)),e=!0);a["package"]&&(d["package"]=
+JSON.parse(JSON.stringify(a["package"])),e=!0);a.item&&(d.item=JSON.parse(JSON.stringify(a.item)),e=!0);a.integration&&(d.integration=JSON.parse(JSON.stringify(a.integration)),e=!0);a.addon&&(d.addon=JSON.parse(JSON.stringify(a.addon)),e=!0);b&&(d.priority=!0);"function"==typeof nyt_et&&e&&(d.subject="impression",d.gtm=google_tag_manager["GTM-P528B3"].macro(17),b?nyt_et("soon",d):nyt_et(d));dataLayer.push({module:void 0,card:void 0,block:void 0,eventData:void 0,ad:void 0,pageview:{ad:void 0},newsletter:void 0,container:void 0,
+"package":void 0,item:void 0,integration:void 0,addon:void 0})};c.scrolling=function(a){a=a.viewport;var b=a.scrollTop+a.height,d=!1;a.activeTime=this.activeTime;c.scrollStart||(d=c.scrollStart=!0,dataLayer.push({event:"gaScrollEvent",eventData:{gaAction:"scroll_start"}}));c.hitQuartile(b)&&100===c.maxQuartile&&dataLayer.push({event:"gaScrollEvent",eventData:{gaAction:"page_complete"}});"function"==typeof nyt_et&&(nyt_et({subject:"page_update",viewport:a,gtm:google_tag_manager["GTM-P528B3"].macro(18)}),d&&nyt_et("send",
+{subject:"interaction",gtm:google_tag_manager["GTM-P528B3"].macro(19),eventData:{trigger:"module",type:"scroll"},module:{name:"scroll",element:{name:"first-scroll"}}}))};c.slideshow=function(a){var b={};a.slideshow&&("function"==typeof nyt_et&&(b.slideshowObj=JSON.parse(JSON.stringify(a.slideshow)),b.subject="page_update",b.gtm=google_tag_manager["GTM-P528B3"].macro(20),nyt_et("send",b)),dataLayer.push({slideshow:null}))};c.getData=function(a){return(a=google_tag_manager[google_tag_manager["GTM-P528B3"].macro(21)].dataLayer.get(a))?"object"!==typeof a?a:JSON.parse(JSON.stringify(a)):
+""};c.gaEvent={};c.gaEvent["see more"]={category:function(){return c.getData("presentation.pageType")+" - "+c.getData("interaction.type")},action:function(){return c.getData("interaction.module.context")+" - "+c.getData("interaction.module.name")},label:function(){return c.getData("interaction.module.slug")},value:function(){return""}};c.gaEvent["see more"]={category:function(){return c.getData("presentation.pageType")+" - "+c.getData("interaction.type")},action:function(){return c.getData("interaction.module.context")+
+" - "+c.getData("interaction.module.name")},label:function(){return c.getData("interaction.module.slug")},value:function(){return""}};c.gaEvent["games-prototype-spelling-bee"]={value:function(){return c.getData("interaction.module.progress.timeInGame")},label:function(){return c.getData("interaction.module.progress.guess")}}})();</script><script type="text/javascript" id="">!function(d){function x(){var f,a;if(a=d.crypto||d.msCrypto)a=a.getRandomValues(new Uint8Array(18));else for(a=[];18>a.length;)a.push(256*Math.random()^255&(f=f||+new Date)),f=Math.floor(f/256);return btoa(String.fromCharCode.apply(String,a)).replace(/\+/g,"-").replace(/\//g,"_")}var r,t,p,B,l,q,u=[],m={pv_id:"",ctx_id:"",intra:!1,force_xhr:!1,store_last_response:!1},C="object"==typeof d.navigator&&"string"==typeof d.navigator.userAgent&&/iP(ad|hone|od)/.test(d.navigator.userAgent),y="object"==typeof d.navigator&&
+d.navigator.sendBeacon,D=y?C?"xhr_ios":"beacon":"xhr";if(d.nyt_et)try{console.warn("et2 snippet should only load once per page")}catch(f){}else d.nyt_et=function(){function f(v){var b,g,k,n,e;u.length&&(b=r+"track",g=JSON.stringify(u),k=m.force_xhr,n=m.store_last_response,!k&&("beacon"===D||y&&v)?(k=d.navigator.sendBeacon(b,g),n&&(q=k)):((e="undefined"!=typeof XMLHttpRequest?new XMLHttpRequest:new ActiveXObject("Microsoft.XMLHTTP")).open("POST",b),e.withCredentials=!0,e.setRequestHeader("Accept",
+"*/*"),"string"==typeof g?e.setRequestHeader("Content-Type","text/plain;charset\x3dUTF-8"):"[object Blob]"==={}.toString.call(g)&&g.type&&e.setRequestHeader("Content-Type",g.type),n&&!e.onload&&(e.onload=function(){q=e.response},e.onerror=function(z){q=!1}),e.send(g)),u.length=0,clearTimeout(l),l=null)}var a,A,w,c=arguments;if("string"==typeof c[0]&&/init/.test(c[0])&&(m=function(v,b){var g="",k="",n=!1,e=!1,z=!1;if("string"==typeof v&&"init"==v&&"object"==typeof b&&("boolean"==typeof b.intranet&&
+b.intranet&&(n=!0),"boolean"==typeof b.force_xhr&&b.force_xhr&&(e=!0),"boolean"==typeof b.store_last_response&&b.store_last_response&&(z=!0),"string"==typeof b.pv_id_override&&"string"==typeof b.ctx_id_override))if(24<=b.pv_id_override.length&&24<=b.ctx_id_override.length)g=b.pv_id_override,k=b.ctx_id_override;else try{console.warn("override id(s) must be \x3e\x3d 24 chars long")}catch(E){}return{pv_id:g,ctx_id:k,intra:n,store_last_response:z,force_xhr:e}}(c[0],c[3]),p=m.pv_id||x(),"init"==c[0]&&
+!t)){if(t=m.ctx_id||x(),"string"!=typeof c[1]||!/^http/.test(c[1]))throw Error("init must include an et host url");if(r=String(c[1]).replace(/([^\/])$/,"$1/"),"string"!=typeof c[2])throw Error("init must include a source app name");B=c[2]}var h=c.length-1;(a=c[h]&&"object"==typeof c[h]?c[h]:a)||/init/.test(c[0])?a&&!a.subject&&console.warn("event data {} must include a subject"):console.warn("when invoked without 'init' or 'pageinit', nyt_et() must include a event data");r&&a&&a.subject&&(h=a.subject,
+delete a.subject,w="page_exit"==h||"ob_click"==(a.eventData||{}).type,A="page"==h||"page_soft"==h?p:x(),u.push({context_id:t,pageview_id:p,event_id:A,client_lib:"v1.3.0",sourceApp:B,intranet:m.intra?1:void 0,subject:h,how:w&&C&&y?"beacon_ios":D,client_ts:+new Date,data:JSON.parse(JSON.stringify(a))}),"send"==c[0]||A==p||w?f(w):("soon"==c[0]&&(clearTimeout(l),l=setTimeout(f,200)),l=l||setTimeout(f,5500)))},d.nyt_et.get_pageview_id=function(){return p},d.nyt_et.get_context_id=function(){return t},d.nyt_et.get_host=
+function(){return r},d.nyt_et.get_last_send_response=function(){var f=q;return f&&(q=null),f}}(window);</script>
+<script type="text/javascript" id="">nyt_et.get_pageview_id()||nyt_et("init",google_tag_manager["GTM-P528B3"].macro(22),google_tag_manager["GTM-P528B3"].macro(24),{subject:"page",canonicalUrl:(document.querySelector("link[rel\x3dcanonical]")||{}).href,articleId:(document.querySelector("meta[name\x3darticleid]")||{}).content,pubpEventId:(document.querySelector("meta[name\x3dpubp_event_id]")||{}).content,nyt_uri:(document.querySelector("meta[name\x3dnyt_uri]")||{}).content,url:location.href,referrer:"",client_tz_offset:(new Date).getTimezoneOffset(),gtm:google_tag_manager["GTM-P528B3"].macro(29),
+is_iframe:window.top!=window});nytAnalytics=window.nytAnalytics||{};nytAnalytics.et2_pageview_id=nyt_et.get_pageview_id();</script><script type="text/javascript" id="">(function(){if(window.nyt_et){var a={};3<parseInt(navigator.appVersion,10)&&("Microsoft Internet Explorer"===navigator.appName&&document.body?a.size=document.body.offsetWidth+"x"+document.body.offsetHeight:"Netscape"===navigator.appName&&(a.size=window.innerWidth+"x"+window.innerHeight));var b=new Date;a.timeZone=b.getTimezoneOffset()/60*-1;a.timeZoneHour=b.getHours();window.matchMedia&&(!0===window.matchMedia("(orientation: portrait)").matches?a.orientation="port":!0===window.matchMedia("(orientation: landscape)").matches&&
+(a.orientation="land"));a.language="Netscape"===navigator.appName?navigator.language:navigator.userLanguage;b="undefined"!==typeof window.ethereum||"undefined"!==typeof window.web3;nyt_et({subject:"page_update",browser:a,cryptowallet:b,nyt_uri:(document.querySelector("meta[name\x3dnyt_uri]")||{}).content,url:location.href,referrer:"",client_tz_offset:(new Date).getTimezoneOffset(),canonicalUrl:(document.querySelector("link[rel\x3dcanonical]")||{}).href,articleId:(document.querySelector("meta[name\x3darticleid]")||
+{}).content,pubpEventId:(document.querySelector("meta[name\x3dpubp_event_id]")||{}).content,nyt_uri:(document.querySelector("meta[name\x3dnyt_uri]")||{}).content,referrer:"",gtm:google_tag_manager["GTM-P528B3"].macro(38),is_iframe:window.top!=window})}})();</script><script type="text/javascript" id="">window.iterateSettings={apiKey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW55X2lkIjoiNWMwOThiM2QxNjU0YzEwMDAxMmM2OGY5IiwiaWF0IjoxNTQ0MTI5MzQxfQ.UI13nEXGs0udbZxhjyFLruAEed42XwFO4fZlCqOgY1o"};
+(function(a,d,f,g,h){function e(){b=d.createElement(f);b.id=g;b.async=1;b.src="https://platform.iteratehq.com/loader.js";k.parentNode.insertBefore(b,k)}if(!d.getElementById(g)){a.IterateObjectName=h;var c=function(){c.c(arguments)};c.q=[];c.c=function(l){c.q.push(l)};a[h]=c;var b,k=d.getElementsByTagName(f)[0];"complete"===d.readyState?e():a.attachEvent?a.attachEvent("onload",e):a.addEventListener("load",e,!1)}})(window,document,"script","iterate-js","Iterate");</script>
+<script type="text/javascript" id="">try{if(window.Iterate&&"function"===typeof Iterate){var subscriberInfo="",uType="undefined",eduSubscriber="object"===typeof subscriberInfo?subscriberInfo.eduSubscriber:"",userType="string"===typeof uType?uType:"",surveyTriggerCookie="false",params={eduSubscriber:eduSubscriber,userType:userType};surveyTriggerCookie?(params.external_id="undefined",params.agentId="mupUTx0MbjgRr6d_sCGyRd",Iterate("identify",params),Iterate("install",surveyTriggerCookie)):
+Iterate("identify",params)}}catch(a){console.log(a)};</script><iframe src="./Wordle - The New York Times3_files/container.html" style="visibility: hidden; display: none;"></iframe><iframe src="./Wordle - The New York Times3_files/aframe.html" width="0" height="0" style="display: none;"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./Wordle - The New York Times3_files/activityi.html"></iframe><script type="text/javascript" id="" src="./Wordle - The New York Times3_files/50550"></script><script type="text/javascript" id="">window.parent===window&&function(){function d(){var a;return a=(a=unescape(document.cookie).match("NYT-Edition\x3d([^;]+)"))&&a[1]&&-1!==a[1].indexOf("edition|GLOBAL")?"international.nytimes.com":/^\/(games|crosswords|puzzles)/.test(document.location.pathname)?"games.nytimes.com":"nytimes.com"}function b(){var a;regex=/(^.*)(nytimes.com.*)/;return a=google_tag_manager["GTM-P528B3"].macro(61)&&google_tag_manager["GTM-P528B3"].macro(62).match(regex)[2]}function c(){var a=[];"Homepage"===google_tag_manager["GTM-P528B3"].macro(63)?a.push("Homepage"):(google_tag_manager["GTM-P528B3"].macro(64)&&
+a.push(google_tag_manager["GTM-P528B3"].macro(65)),google_tag_manager["GTM-P528B3"].macro(66)&&a.push(google_tag_manager["GTM-P528B3"].macro(67)),google_tag_manager["GTM-P528B3"].macro(68)&&a.push(google_tag_manager["GTM-P528B3"].macro(69)),/parenting\./.test(document.location.host)&&a.push("parenting"),0===a.length&&/\/202\d\/\d\d\/\d\d\/us\/elections\/results/.test(document.location.href)&&(a.push("us"),a.push("Elections")));return a.join(",")}if("object"==typeof window._sf_async_config&&"object"==typeof pSUPERFLY&&"function"==typeof pSUPERFLY.virtualPage)pSUPERFLY.virtualPage({sections:c(),path:b(),
+title:google_tag_manager["GTM-P528B3"].macro(70)||document.title});else{window._sf_async_config={uid:16698,domain:d(),pingServer:"pnytimes.chartbeat.net",useCanonical:!0,path:b(),title:google_tag_manager["GTM-P528B3"].macro(71)||document.title};_cbq=window._cbq=window._cbq||[];switch(google_tag_manager["GTM-P528B3"].macro(72)){case "sub":_cbq.push(["_acct","paid"]);break;case "anon":_cbq.push(["_acct","anon"]);break;case "regi":_cbq.push(["_acct","lgdin"])}try{window._sf_async_config.sections=c()}catch(a){}try{window._sf_async_config.authors=Array.isArray(google_tag_manager["GTM-P528B3"].macro(73))&&
+google_tag_manager["GTM-P528B3"].macro(74).join(",")}catch(a){}window._sf_endpt=(new Date).getTime();firstScript=document.getElementsByTagName("script")[0];cbScript=document.createElement("script");cbScript.async=!0;cbScript.src="https://static.chartbeat.com/js/chartbeat.js";firstScript.parentNode.insertBefore(cbScript,firstScript)}}();</script>
+<iframe name="__bkframe" height="0" width="0" frameborder="0" style="display:none;position:absolute;clip:rect(0px 0px 0px 0px)" src="./Wordle - The New York Times3_files/saved_resource.html"></iframe> 
+<script type="text/javascript" id="" src="./Wordle - The New York Times3_files/bk-coretag.js"></script><script type="text/javascript" id="">(function(){function c(d,a){var b=document.createElement("script");b.type="text/javascript";a&&(b.onload=a,b.onerror=a);a=document.getElementsByTagName("head")[0];a.appendChild(b);b.src=d}c("https://a1.nyt.com/analytics/show-ads.js",function(){window.nyt_et&&nyt_et({subject:"page_update",adBlockEnabled:!1!==window.adBlockDetected})})})();</script>  <script type="text/javascript" id="" src="./Wordle - The New York Times3_files/comscore-streaming.js"></script><script type="text/javascript" id="">(function(b){function f(){if("MozAppearance"in document.documentElement.style){var a=indexedDB.open("test");a.onerror=c;a.onsuccess=d;return!0}}function e(a){b.nyt_et&&nyt_et({subject:"page_update",isIncognito:a})}var c,d;b.nyt_et&&function(a,g){c=a||function(){};d=g||function(){};b.webkitRequestFileSystem?(b.webkitRequestFileSystem(b.TEMPORARY,1,d,c),a=!0):a=void 0;if(!(a=a||f()))a:if(0<Object.prototype.toString.call(b.HTMLElement).indexOf("Constructor")||"[object SafariRemoteNotification]"===(!b.safari||
+safari.pushNotification).toString()||b.localStorage&&/Safari/.test(b.navigator.userAgent)){try{b.openDatabase(null,null,null,null)}catch(h){c();a=!0;break a}try{localStorage.length||(localStorage.x=1,localStorage.removeItem("x")),d()}catch(h){navigator.cookieEnabled?c():d()}a=!0}else a=void 0;a||(b.indexedDB||!b.PointerEvent&&!b.MSPointerEvent?a=void 0:(c(),a=!0));a||d()}(function(){e(!0)},function(){e(!1)})})(window);</script><script type="text/javascript" id="">(function(){window.nyt_et&&nyt_et("soon",{subject:"page_update",jsonKidd:google_tag_manager["GTM-P528B3"].macro(115),canonicalUrl:(document.querySelector("link[rel\x3dcanonical]")||{}).href,assetId:(document.querySelector("meta[name\x3darticleid]")||{}).content,nyt_uri:(document.querySelector("meta[name\x3dnyt_uri]")||{}).content,url:location.href,referrer:"",client_tz_offset:(new Date).getTimezoneOffset(),sourceApp:google_tag_manager["GTM-P528B3"].macro(121),gtm:google_tag_manager["GTM-P528B3"].macro(122),presentation:google_tag_manager["GTM-P528B3"].macro(123),
+web_app:{releaseVersion:google_tag_manager["GTM-P528B3"].macro(124)}})})();</script><script type="text/javascript" id="" src="./Wordle - The New York Times3_files/nyt.js"></script> 
+<script type="text/javascript" id="">(function(){var d=function(a){var e,b,d=[{name:"Bot",regex:"(GomezAgent|yandex.com/bots|(Googlebot|bingbot|YandexBot|facebookexternalhit)/[\\d]+(?:.[\\d]+)?)"},{name:"UC Browser",regex:"(UCMini|UCBrowser)/([\\d]+)(.[\\d]+)*"},{name:"Opera",regex:"(OPR|Opera)[/ ]([\\d]+)(.[\\d]+)*"},{name:"Sogou Explorer",regex:"(SE) ([\\d]+)(.[a-zA-Z\\d]+)*"},{name:"",regex:"(Avant Browser)"},{name:"",regex:"((?:Mobile)?Iron|Puffin|Maxthon|Chromium|Sleipnir|Lightning|QQBrowser|Silk|chromeframe|iCab|Arora|Kindle|Midori|rekonq|Vienna|Epiphany|NetFront|konqueror|PhantomJS|YaBrowser|IEMobile|PaleMoon|Thunderbird|SeaMonkey|baidubrowser|NokiaBrowser|Edge|Avant Browser|Iceweasel|K-Meleon)/([\\d]+)(.[\\d]+)*"},
+{name:"",regex:"(Lunascape)[/ ]([\\d]+)(.[\\d]+)*"},{name:"Firefox",regex:"(Firefox)/([\\d]+)(.[\\d]+)*"},{name:"MSIE",regex:"(?:(Windows).* Trident/([\\d]+)(.[\\d]+)*|(MSIE) ([\\d]+)(.[\\d]+)*)"},{name:"Chrome",regex:"(Chrome)/([\\d]+)(.[\\d]+)*"},{name:"Android Browser",regex:"(Android)[ /]([\\d]+)(?:.[\\d]+.[\\d]+)?.*(Mobile )?Safari"},{name:"BlackBerry Browser",regex:"(BlackBerry|BB[\\d]+);.*Mobile Safari"},{name:"",regex:"(OmniWeb)/v([\\d]+)(?:.[\\d]+)"},{name:"Chrome iOS",regex:"(CriOS)/([\\d]+)(?:.[\\d]+)*"},
+{name:"Safari",regex:"(?:Version/([\\d]+)(?:.[\\d]+)* )?(Safari)/(?:[\\d]+(?:.[\\d]+)*)",mobileRegex:"(iPhone; CPU iPhone OS|iPad; CPU OS).*Mobile/"},{name:"Facebook App",regex:"\\[(FBAN).*FBAV/([\\d]+)(.[\\d]+)*.*\\]?"},{name:"NYT App",regex:"(NYTimes(-[a-zA-Z]+)?|Crosswords|NYTNow|Cooking|NYTOpinion|)/([\\d]+)(.[\\d]+)* CFNetwork/([\\d]+)(.[\\d]+)*"},{name:"AppleWebKit Based Browser",regex:"(AppleWebKit)/([\\d]+)(.[\\d]+)*"}];for(e=0;e<d.length;e++){var c=d[e];if((b=(new RegExp(c.regex)).exec(a))&&
+1<b.length)return e=c.name||b[1],c.mobileRegex&&(new RegExp(c.mobileRegex)).test(a)&&(e+=" Mobile"),e}return"Unknown"},a=function(a){return"object"===typeof a&&a instanceof Array?a.filter(function(a){return""!==a}).map(function(a){return a.replace(/,/g," ")}):[]},h=google_tag_manager["GTM-P528B3"].macro(75)||(document.querySelector("meta[name\x3dCG]")||{}).content,k="";if(!/Homepage/i.test(h)){k=a(google_tag_manager["GTM-P528B3"].macro(76));var l=a(google_tag_manager["GTM-P528B3"].macro(77)||google_tag_manager["GTM-P528B3"].macro(78)||[]),b=a(google_tag_manager["GTM-P528B3"].macro(79));a=a(google_tag_manager["GTM-P528B3"].macro(80));
+k=k.concat(l).concat(b).concat(a).join(",")}bk_ignore_meta=!0;l=function(a){var b=[];if(null!=a&&""!=a)for(var c in a)null!=a[c]&&"InclusionFlag"in a[c]&&1==a[c].InclusionFlag&&b.push(c);return b.join(",")};bk_addPageCtx("regid",google_tag_manager["GTM-P528B3"].macro(81));a=google_tag_manager["GTM-P528B3"].macro(82)||{};b=google_tag_manager["GTM-P528B3"].macro(83)||{};b=b.subscriptions||[];var c=!1;0<b.length&&(c="F"==b[0].grace?!1:!0);bk_addPageCtx("usertype",google_tag_manager["GTM-P528B3"].macro(84));bk_addPageCtx("userloggedin",google_tag_manager["GTM-P528B3"].macro(85));bk_addPageCtx("coresubtenure",
+a.coreSubscriptionTenure?a.coreSubscriptionTenure:"");bk_addPageCtx("corestop",a.coreStopCode?a.coreStopCode:"");bk_addPageCtx("corepromo",!!a.coreOnPromotion);bk_addPageCtx("ingrace",c);bk_addPageCtx("giftrecipient",!!a.giftSubscriptionRecipient);bk_addPageCtx("childsubrecipient",!!a.childSubscription);bk_addPageCtx("bundlecoredigi",a.coreDigiBundle?a.coreDigiBundle:"");bk_addPageCtx("bundlecorehd",a.coreHDBundle?a.coreHDBundle:"");bk_addPageCtx("bundlexword",a.crosswordStandaloneBundle?a.crosswordStandaloneBundle:
+"");bk_addPageCtx("bundlecooking",a.cookingStandaloneBundle?a.cookingStandaloneBundle:"");bk_addPageCtx("bundleother",a.otherBundle?a.otherBundle:"");bk_addPageCtx("b2bentitle",!!a.b2bSubscription);bk_addPageCtx("marketingoptin",!!a.marketingOptIn);bk_addPageCtx("formercoresub",!!a.formerCoreSubscriber);bk_addPageCtx("formeredusub",!!a.formerEduSubscriber);bk_addPageCtx("formerhdsub",!!a.formerHDSubscriber);bk_addPageCtx("retentionscore",a.retentionSegment||"");bk_addPageCtx("topwatseg",google_tag_manager["GTM-P528B3"].macro(86));
+bk_addPageCtx("sassegment",a.sasSegment||"");bk_addPageCtx("hdstopreasoncode",a.hdStopReasonCode||"");bk_addPageCtx("regitenure",a.regiTenure||"");bk_addPageCtx("cookinggrace",!!a.cookingGrace);bk_addPageCtx("crosswordsgrace",!!a.crosswordsGrace);bk_addPageCtx("gatewayhitlm",!!a.gatewayHitLM);bk_addPageCtx("coregracelevel",!!a.coreGraceLevel);bk_addPageCtx("activedaysengagement",a.engagementActiveDays||"");bk_addPageCtx("authors",(google_tag_manager["GTM-P528B3"].macro(87)||[]).join(",")||"");bk_addPageCtx("newsletter",
+a.newsletterList||"");b=google_tag_manager["GTM-P528B3"].macro(88);c="";if(null!=b){try{var f=JSON.parse(unescape(b))}catch(e){f={}}f.isCorpUser&&(c=f.orgName)}bk_addPageCtx("businessname",c);bk_addPageCtx("corpadblock",/CORP_ADBLOCK/i.test(b));f=google_tag_manager["GTM-P528B3"].macro(89);c=b="";if(null!=f){try{var g=JSON.parse(unescape(f))}catch(e){g={}}if(c=g.isEduUser||"")b=g.nickName}bk_addPageCtx("isedu",c);bk_addPageCtx("propensityedu",b);bk_addPageCtx("propensityscore",google_tag_manager["GTM-P528B3"].macro(90));bk_addPageCtx("activedays",google_tag_manager["GTM-P528B3"].macro(91));
+g=google_tag_manager["GTM-P528B3"].macro(93)||{};bk_addPageCtx("metercount",g.v||"");bk_addPageCtx("propensitysection",google_tag_manager["GTM-P528B3"].macro(94));bk_addPageCtx("propensitytype",google_tag_manager["GTM-P528B3"].macro(95));bk_addPageCtx("propensitysite",google_tag_manager["GTM-P528B3"].macro(96));bk_addPageCtx("url",window.location.href);bk_addPageCtx("referrer",google_tag_manager["GTM-P528B3"].macro(101));bk_addPageCtx("section",h);h=google_tag_manager["GTM-P528B3"].macro(102)||"";bk_addPageCtx("subsection",h);bk_addPageCtx("pagetype",google_tag_manager["GTM-P528B3"].macro(103));bk_addPageCtx("keywords",k);bk_addPageCtx("sourceapp",
+google_tag_manager["GTM-P528B3"].macro(104));bk_addPageCtx("browsername",d(navigator.userAgent));bk_addPageCtx("funnelpropensity",google_tag_manager["GTM-P528B3"].macro(105));bk_addPageCtx("column",google_tag_manager["GTM-P528B3"].macro(106));d=google_tag_manager["GTM-P528B3"].macro(107)||[];bk_addPageCtx("collectionname",d.join(","));bk_addPageCtx("contenttype",google_tag_manager["GTM-P528B3"].macro(108));d=l(google_tag_manager["GTM-P528B3"].macro(109));bk_addPageCtx("emotions",d);"object"===typeof bk_optly&&bk_optly instanceof Array&&0<bk_optly.length&&(bk_addPageCtx("optlyexpname",bk_optly[0].experience||""),bk_addPageCtx("optlyexpvariant",
+bk_optly[0].variant||""));bk_addPageCtx("xwordstenure",a.crosswordsSubscriptionTenure?a.crosswordsSubscriptionTenure:"");bk_addPageCtx("cookingtenure",a.cookingSubscriptionTenure?a.cookingSubscriptionTenure:"");bk_addPageCtx("xwordsstop",a.crosswordsStopCode?a.crosswordsStopCode:"");bk_addPageCtx("cookingstop",a.cookingStopCode?a.cookingStopCode:"");bk_addPageCtx("productswitch",a.productSwitch?a.productSwitch:"");bk_addPageCtx("giftsubgiver",!!a.giftGiver);bk_addPageCtx("formerxwordsub",!!a.formerCrosswordSubscriber);
+bk_addPageCtx("formercookingsub",!!a.formerCookingSubscriber);bk_addPageCtx("watsegs",a.watString?a.watString:"");bk_addPageCtx("edusub",a.eduSubscriber?a.eduSubscriber:"");bk_addPageCtx("aiqaudience",(google_tag_manager["GTM-P528B3"].macro(110)||[]).map(function(a){return a[0]}).join(","));d=50134;navigator.userAgent.match(/Android|iPhone|iPad|iPod|Windows Phone|webOS|BlackBerry|RIM/i)&&(d=50747);bk_allow_multiple_calls=!0;bk_doJSTag(d,4)})();</script>
+<script type="text/javascript" async="true" src="./Wordle - The New York Times3_files/65568.js"></script><script type="text/javascript" id="">(function(){window.nyt_et&&nyt_et("send",{subject:"mt_expose",vendor:"FB"})})();</script></body></html>
