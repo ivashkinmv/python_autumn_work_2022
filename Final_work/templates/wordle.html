@@ -107,14 +107,21 @@
 
 </style>
 <script>
+  l = 5
   $(document).ready(function() {
    d ='';
 
     $("button").click(function(){
       d = d+$(this).data('key');
     // $(this).data('state','absent');
+    $('#t #second #four').text('44444');
+
       alert(d);
-    });
+    l -=1
+    if (l == 0){
+    alert('ЭТО КОНЕЦ');
+    }
+      });
 });
 </script>
 </html>
