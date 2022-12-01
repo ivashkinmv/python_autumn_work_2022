@@ -127,7 +127,8 @@
     if (l == 0){$(document).on('keydown',function(e) {
     if(e.which == 9) {     
       let form_data = d; // Собираем все данные из формы
-      console.log(form_data, "Ghjdthrf")
+      console.log( typeof
+form_data, "Ghjdthrf")
           $.ajax({
               type: "POST", // Метод отправки
               url: "wordle", // Путь до php файла отправителя
