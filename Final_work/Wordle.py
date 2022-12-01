@@ -47,6 +47,7 @@ print(wordle)
 def game():
     if request.method == "POST":
         form_data = request.form['form_data']
+        print(form_data)
         for i in form_data:
             print(i)
         return render_template("wordle.html")
@@ -126,4 +127,4 @@ def compare_with_db():
 """Конец. Формирование базы слов для PostgresQL"""
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
