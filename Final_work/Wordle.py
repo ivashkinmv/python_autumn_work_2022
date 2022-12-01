@@ -1,26 +1,26 @@
 import psycopg2
 from random import randint
-from flask import Flask
-from flask import request
+from flask import Flask, render_template
+from flask import request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
-# # create the extension
-# db = SQLAlchemy()
-# # create the app
-# app = Flask(__name__)
-# # configure the SQLite database, relative to the app instance folder
-# app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://postgres:162657@localhost:5432/wordle'
-# db.init_app(app)
-#
-#
-# class Words(db.Model):
-#     __tablename__ = "words"
-#     id = db.Column(db.Integer, primary_key=True)
-#     words = db.Column(db.String, unique=True, nullable=False)
-#
-#
-# with app.app_context():
-#     db.create_all()
+# create the extension
+db = SQLAlchemy()
+# create the app
+app = Flask(__name__)
+# configure the SQLite database, relative to the app instance folder
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://postgres:162657@localhost:5432/wordle'
+db.init_app(app)
+
+
+class Words(db.Model):
+    __tablename__ = "words"
+    id = db.Column(db.Integer, primary_key=True)
+    words = db.Column(db.String, unique=True, nullable=False)
+
+
+with app.app_context():
+    db.create_all()
 
 conn = psycopg2.connect(
     host="localhost",
@@ -42,8 +42,22 @@ records = cur.fetchone()
 wordle = records[0]
 print(wordle)
 
-input_word = str(input("Слово из 5ти букв: "))
-answer = input_word.lower()
+
+@app.route("/wordle", methods=["GET", "POST"])
+def game():
+    if request.method == "POST":
+        form_data = request.form['form_data']
+        for i in form_data:
+            print(i)
+        return render_template("wordle.html")
+    return render_template("wordle.html")
+    # if request.method == "POST":
+    #     return render_template("wordle.html")
+
+    # return render_template("wordle.html")
+
+# input_word = str(input("Слово из 5ти букв: "))
+# answer = input_word.lower()
 
 """Заготовка побуквенно"""
 # # let1 = str(input("B1: "))
@@ -88,7 +102,7 @@ def compare_with_db():
     conn.close()
 
 
-compare_with_db()
+# compare_with_db()
 
 
 
@@ -111,5 +125,5 @@ compare_with_db()
 # file.close()
 """Конец. Формирование базы слов для PostgresQL"""
 
-# if __name__ == "__main__":
-#     app.run()
+if __name__ == "__main__":
+    app.run()

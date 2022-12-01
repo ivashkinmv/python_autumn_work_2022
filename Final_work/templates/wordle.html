@@ -12,8 +12,8 @@
 </div>
 
 <div align="center">
-  <table style='font-family:"Calibri", monospace; font-size:120%'>
-    <tr><td><input type="text" maxlength="1" style="border: 0px; height: 20px; width:20px; font-size:100px'" align="center" ></td><td>Я 2</td><td>Я 1</td><td>Я 2</td><td>Я 1</td></tr>
+  <table id = 'game_field' style='font-family:"Calibri", monospace; font-size:120%'>
+    <tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr>
     <tr><td>Я 3</td><td>Я 4</td><td>Я 3</td><td>Я 4</td><td>Я 3</td></tr>
     <tr><td>Я 1</td><td>Я 2</td><td>Я 1</td><td>Я 2</td><td>Я 1</td></tr>
     <tr><td>Я 3</td><td>Я 4</td><td>Я 3</td><td>Я 4</td><td>Я 3</td></tr>
@@ -21,7 +21,11 @@
   </table>
 
 <div class = "blocks">
+  <form action="/wordle" method="post">
+    <input type="submit" class="Key-module_key__Rv-Vp" value="PUSH">
+  </form>
   <div>
+    
     <button type="button" data-key="q" class="Key-module_key__Rv-Vp">q</button>
     <button type="button" data-key="w" class="Key-module_key__Rv-Vp">w</button>
     <button type="button" data-key="e" class="Key-module_key__Rv-Vp">e</button>
@@ -110,18 +114,45 @@
   l = 5
   $(document).ready(function() {
    d ='';
+   
+    $("button").click(function() {
+        d = d+$(this).data('key');
+        // $(this).data('state','absent');
+        $('#game_field tr').eq(0).children("td").eq(d.length-1).text($(this).data('key'));
+        console.log(d)
+        console.log(d.length)
 
-    $("button").click(function(){
-      d = d+$(this).data('key');
-    // $(this).data('state','absent');
-    $('#t #second #four').text('44444');
-
-      alert(d);
     l -=1
-    if (l == 0){
-    alert('ЭТО КОНЕЦ');
-    }
+
+    if (l == 0){$(document).on('keydown',function(e) {
+    if(e.which == 9) {     
+      let form_data = d; // Собираем все данные из формы
+      console.log(form_data, "Ghjdthrf")
+          $.ajax({
+              type: "POST", // Метод отправки
+              url: "wordle", // Путь до php файла отправителя
+              data: form_data,
+              success: function () {
+                  // Код в этом блоке выполняется при успешной отправке сообщения
+                  alert("Ваше сообщение отправлено!");
+              }
+          });
+        alert('You pressed enter!');
+        }
       });
+    }
+
+
+
+  });
 });
+
+
+
+
 </script>
+
+
 </html>
+
+
