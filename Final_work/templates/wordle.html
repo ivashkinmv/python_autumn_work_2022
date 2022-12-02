@@ -127,17 +127,22 @@
     if (l == 0){$(document).on('keydown',function(e) {
     if(e.which == 9) {     
       form_data = String(d); // Собираем все данные из формы
-      console.log( typeof
-form_data, "Ghjdthrf")
+      console.log( typeof form_data, "Ghjdthrf")
           $.ajax({
               type: "POST", // Метод отправки
-              url: "wordle", // Путь до php файла отправителя
-              data: form_data,
+              url: "wordle", // Путь до html файла отправителя
+              data: {'word':form_data},
               success: function () {
                   // Код в этом блоке выполняется при успешной отправке сообщения
                   alert("Ваше сообщение отправлено!");
               }
+          })
+          .done(function(data) {
+              if (data.)
+
           });
+
+
         alert('You pressed enter!');
         }
       });

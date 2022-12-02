@@ -35,23 +35,56 @@ records = cur.fetchall()
 
 id_x = randint(1, len(records))
 
-cur = conn.cursor()
+# cur = conn.cursor()
 sql_word = f"""SELECT words FROM words WHERE id = {id_x}"""
 cur.execute(sql_word)
 records = cur.fetchone()
 wordle = records[0]
 print(wordle)
+# conn.close()
 
 
+#
 @app.route("/wordle", methods=["GET", "POST"])
 def game():
     if request.method == "POST":
-        form_data = request.form['form_data']
-        print(form_data)
-        for i in form_data:
-            print(i)
+        # answer = request.form.get('word')
+        # print(answer)
+        # global cur
+        cur_game = conn.cursor()
+        # print(type(request.form.get('word')))
+        sql_request = f"SELECT words FROM words WHERE words = '{request.form.get('word')}';"
+        cur_game.execute(sql_request)
+        records2 = cur_game.fetchone()
+        # print(type(records2), request.form.get('word'))
+        if records2[0] == request.form.get('word'):
+            print("Есть такое слово в базе")
+            lst = []
+            answer = request.form.get('word')
+            if wordle != answer:
+                for letter in answer:
+                    if letter in wordle:
+                        if wordle.index(letter) != answer.index(letter):
+                            lst.append(letter.upper())
+                        else:
+                            lst.append("'")
+                            lst.append(letter.upper())
+                            lst.append("'")
+                    else:
+                        lst.append(letter)
+            else:
+                for ltr in answer:
+                    lst.append("'")
+                    lst.append(ltr.upper())
+                    lst.append("'")
+            print("".join(lst))
+        else:
+            print("В базе такого слова нет")
+        conn.close()
         return render_template("wordle.html")
     return render_template("wordle.html")
+
+
     # if request.method == "POST":
     #     return render_template("wordle.html")
 
@@ -68,42 +101,6 @@ def game():
 # # let5 = str(input("B5: "))
 
 
-def game():
-    lst = []
-    if wordle != answer:
-        for letter in answer:
-            if letter in wordle:
-                if wordle.index(letter) != answer.index(letter):
-                    lst.append(letter.upper())
-                else:
-                    lst.append("'")
-                    lst.append(letter.upper())
-                    lst.append("'")
-            else:
-                lst.append(letter)
-    else:
-        for ltr in answer:
-            lst.append("'")
-            lst.append(ltr.upper())
-            lst.append("'")
-    print("".join(lst))
-
-
-def compare_with_db():
-    global answer
-    global cur
-    # cur = conn.cursor()
-    sql_request = f"SELECT words FROM words WHERE words = '{answer}';"
-    cur.execute(sql_request)
-    records2 = cur.fetchone()
-    if records2 == answer:
-        game()
-    else:
-        print("В базе такого слова нет")
-    conn.close()
-
-
-# compare_with_db()
 
 
 
@@ -125,6 +122,45 @@ def compare_with_db():
 # file_create.close()
 # file.close()
 """Конец. Формирование базы слов для PostgresQL"""
+
+"""Функция игры"""
+# def game():
+#     lst = []
+#     answer = request.form.get('word')
+#     if wordle != answer:
+#         for letter in answer:
+#             if letter in wordle:
+#                 if wordle.index(letter) != answer.index(letter):
+#                     lst.append(letter.upper())
+#                 else:
+#                     lst.append("'")
+#                     lst.append(letter.upper())
+#                     lst.append("'")
+#             else:
+#                 lst.append(letter)
+#     else:
+#         for ltr in answer:
+#             lst.append("'")
+#             lst.append(ltr.upper())
+#             lst.append("'")
+#     print("".join(lst))
+"""Функция сравнения"""
+# def compare_with_db():
+#     global answer
+#     global cur
+#     # cur = conn.cursor()
+#     sql_request = f"SELECT words FROM words WHERE words = '{answer}';"
+#     cur.execute(sql_request)
+#     records2 = cur.fetchone()
+#     if records2 == answer:
+#         game()
+#     else:
+#         print("В базе такого слова нет")
+#     conn.close()
+
+
+# compare_with_db()
+
 
 if __name__ == "__main__":
     app.run(debug=True)
