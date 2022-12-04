@@ -40,58 +40,68 @@ sql_word = f"""SELECT words FROM words WHERE id = {id_x}"""
 cur.execute(sql_word)
 records = cur.fetchone()
 wordle = records[0]
-print(wordle)
+# print(wordle)
 # conn.close()
 
 
 #
 @app.route("/wordle", methods=["GET", "POST"])
 def game():
+    print(wordle)
     if request.method == "POST":
-        # answer = request.form.get('word')
+        answer = request.form.get('word')
+        answer = answer.lower()
         # print(answer)
-        # global cur
         cur_game = conn.cursor()
-        # print(type(request.form.get('word')))
-        sql_request = f"SELECT words FROM words WHERE words = '{request.form.get('word')}';"
+        sql_request = f"SELECT words FROM words WHERE words = '{answer}';"
         cur_game.execute(sql_request)
         records2 = cur_game.fetchone()
-        # print(type(records2), request.form.get('word'))
-        if records2[0] == request.form.get('word'):
-            print("Есть такое слово в базе")
+        # print(records2, type(records2), request.form.get('word'))
+        if records2 is None:
+            print("В базе такого слова нет None")
+            # return jsonify({'error': "В базе такого слова нет"})
+            # return render_template("wordle.html")
+        else:
+            print("Есть такое слово в базе ")
             lst = []
-            answer = request.form.get('word')
+            dic = {}
+            # answer = request.form.get('word')
             if wordle != answer:
+                j = 0
                 for letter in answer:
+                    print(answer.index(letter))
                     if letter in wordle:
                         if wordle.index(letter) != answer.index(letter):
-                            lst.append(letter.upper())
+                            # lst.append(letter.upper())
+                            dic.update({j: 'Khaki'})
                         else:
-                            lst.append("'")
-                            lst.append(letter.upper())
-                            lst.append("'")
+                            # lst.append("'")
+                            # lst.append(letter.upper())
+                            dic.update({j: 'SkyBlue'})
+                            print(j)
+                            # lst.append("'")
                     else:
                         lst.append(letter)
+                        dic.update({j: 'gray'})
+                        # print(answer.index(letter), j)
+                    j +=1
             else:
+                i = 0
                 for ltr in answer:
-                    lst.append("'")
+                    # lst.append("'")
                     lst.append(ltr.upper())
-                    lst.append("'")
+                    dic.update({i: 'SkyBlue'})
+                    i += 1
+                    # lst.append("'")
             print("".join(lst))
-        else:
-            print("В базе такого слова нет")
-        conn.close()
-        return render_template("wordle.html")
+            print(lst)
+            print(dic)
+            return jsonify({'word': {'word': lst}, 'color': dic})
+
+        return jsonify({'error': "В базе такого слова нет"})
+
     return render_template("wordle.html")
 
-
-    # if request.method == "POST":
-    #     return render_template("wordle.html")
-
-    # return render_template("wordle.html")
-
-# input_word = str(input("Слово из 5ти букв: "))
-# answer = input_word.lower()
 
 """Заготовка побуквенно"""
 # # let1 = str(input("B1: "))
@@ -99,10 +109,6 @@ def game():
 # # let3 = str(input("B3: "))
 # # let4 = str(input("B4: "))
 # # let5 = str(input("B5: "))
-
-
-
-
 
 
 """Формирование базы слов для PostgresQL"""
@@ -161,6 +167,6 @@ def game():
 
 # compare_with_db()
 
-
+# conn.close()
 if __name__ == "__main__":
     app.run(debug=True)

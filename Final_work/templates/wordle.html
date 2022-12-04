@@ -5,6 +5,7 @@
     <title>Wordle</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/wordle.js') }}"></script>
 </head>
 <body>
 <div class="heading">
@@ -12,18 +13,23 @@
 </div>
 
 <div align="center">
-  <table id = 'game_field' style='font-family:"Calibri", monospace; font-size:120%'>
-    <tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr>
-    <tr><td>Я 3</td><td>Я 4</td><td>Я 3</td><td>Я 4</td><td>Я 3</td></tr>
-    <tr><td>Я 1</td><td>Я 2</td><td>Я 1</td><td>Я 2</td><td>Я 1</td></tr>
-    <tr><td>Я 3</td><td>Я 4</td><td>Я 3</td><td>Я 4</td><td>Я 3</td></tr>
-    <tr><td>Я 3</td><td>Я 4</td><td>Я 3</td><td>Я 4</td><td>Я 3</td></tr>
-  </table>
+  <table id = 'game_field'>
+    <tr><td style="text-align:center"></td><td style="text-align:center"> </td><td style="text-align:center"> </td>
+      <td style="text-align:center"> </td><td style="text-align:center"> </td style="text-align:center"></tr>
+    <tr><td style="text-align:center"></td><td style="text-align:center"> </td><td style="text-align:center"> </td>
+      <td style="text-align:center"> </td><td style="text-align:center"> </td style="text-align:center"></tr>
+    <tr><td style="text-align:center"></td><td style="text-align:center"> </td><td style="text-align:center"> </td>
+      <td style="text-align:center"> </td><td style="text-align:center"> </td style="text-align:center"></tr>
+    <tr><td style="text-align:center"></td><td style="text-align:center"> </td><td style="text-align:center"> </td>
+      <td style="text-align:center"> </td><td style="text-align:center"> </td style="text-align:center"></tr>
+    <tr><td style="text-align:center"></td><td style="text-align:center"> </td><td style="text-align:center"> </td>
+      <td style="text-align:center"> </td><td style="text-align:center"> </td style="text-align:center"></tr>
+    <tr><td style="text-align:center"></td><td style="text-align:center"> </td><td style="text-align:center"> </td>
+      <td style="text-align:center"> </td><td style="text-align:center"> </td style="text-align:center"></tr>
+    </table>
+  
 
 <div class = "blocks">
-  <form action="/wordle" method="post">
-    <input type="submit" class="Key-module_key__Rv-Vp" value="PUSH">
-  </form>
   <div>
     
     <button type="button" data-key="q" class="Key-module_key__Rv-Vp">q</button>
@@ -77,7 +83,7 @@
       border: 2px solid gray;
     }
     td {
-      background-color:white;
+   
       padding: 15px;
       border-radius: 5px
     }
@@ -108,50 +114,90 @@
     margin-top:200px;
     }
 
+    .red {
+      background-color: red;
+    }
+    .SkyBlue {
+      background-color: SkyBlue;
+    }
+
+    .gray {
+      background-color: gray;
+    }
+    .Khaki {
+      background-color: Khaki;
+    }
 
 </style>
 <script>
-  l = 5
-  $(document).ready(function() {
-   d ='';
-   
-    $("button").click(function() {
-        d = d+$(this).data('key');
-        // $(this).data('state','absent');
-        $('#game_field tr').eq(0).children("td").eq(d.length-1).text($(this).data('key'));
-        console.log(d)
-        console.log(d.length)
+  //l = 5
+//   n = 0
+//   $(document).ready(function() {
+//     d ='';
+    
+//     $("button").click(function() {
+//         d = d+$(this).data('key');
+//         // $(this).data('state','absent');
+//         $('#game_field tr').eq(n).children("td").eq(d.length-1).text($(this).data('key'));
+//         console.log(n)
+//         console.log(d)
+//         //console.log(d.length)
 
-    l -=1
+//     if (d.length == 5){$(document).on('keydown',function(e) {
+//     if(e.which == 9) {     
+//       form_data = String(d); // Собираем все данные из формы
+//       console.log(form_data, "Собранное слово для отправки на сервер")
+//           $.ajax({
+//               type: "POST", // Метод отправки
+//               url: "wordle", // Путь до html файла отправителя
+//               data: {'word':form_data},
+//               success: function () {  // Код в этом блоке выполняется при успешной отправке сообщения
+//                 console.log(n, "Запрос POST")
+//                   //alert("Ваше сообщение отправлено!");
+//               }
+//           })
+//           .done(function(data) {
+//               if (data) {
+//                 $('#game_field tr').eq(n).children("td").eq(0
+//                 ).text(data.word.word[0]).addClass(data.color[0]);
 
-    if (l == 0){$(document).on('keydown',function(e) {
-    if(e.which == 9) {     
-      form_data = String(d); // Собираем все данные из формы
-      console.log( typeof form_data, "Ghjdthrf")
-          $.ajax({
-              type: "POST", // Метод отправки
-              url: "wordle", // Путь до html файла отправителя
-              data: {'word':form_data},
-              success: function () {
-                  // Код в этом блоке выполняется при успешной отправке сообщения
-                  alert("Ваше сообщение отправлено!");
-              }
-          })
-          .done(function(data) {
-              if (data.)
+//                 $('#game_field tr').eq(n).children("td").eq(1
+//                 ).text(data.word.word[1]).addClass(data.color[1]);
 
-          });
+//                 $('#game_field tr').eq(n).children("td").eq(2
+//                 ).text(data.word.word[2]).addClass(data.color[2]);
 
+//                 $('#game_field tr').eq(n).children("td").eq(3
+//                 ).text(data.word.word[3]).addClass(data.color[3]);
 
-        alert('You pressed enter!');
-        }
-      });
-    }
+//               $('#game_field tr').eq(n).children("td").eq(4
+//                 ).text(data.word.word[4]).addClass(data.color[4]);
 
+                
+//                 //$('button').eq(data.word.word[0]).addClass(data.color[0]);
+//                 d ='';
+                
+                
+//                 console.log(n, "Заполнение ")
+//                 n = n+1
+//               }
 
+//               //else if (data.error) {alert("Слова в списке нет!");}
 
-  });
-});
+//           });
+//           //event.preventDefault();
+//         //alert('You pressed enter!');
+//         }
+//       });
+
+      
+//     }
+
+    
+
+//   });
+  
+// });
 
 
 
