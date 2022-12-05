@@ -6,15 +6,16 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/wordle.js') }}"></script>
+    <link href="//fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="heading">
   <h1 align="center"> Wordle</h1>
 </div>
 
-<div align="center">
-  <table id = 'game_field'>
-    <tr><td style="text-align:center"></td><td style="text-align:center"> </td><td style="text-align:center"> </td>
+<div align="center" style='font-family:"Roboto"' style= 'font-weight: 500;'>
+  <table id = 'game_field' >
+    <tr><td style="text-align:center; "></td><td style="text-align:center"> </td><td style="text-align:center"> </td>
       <td style="text-align:center"> </td><td style="text-align:center"> </td style="text-align:center"></tr>
     <tr><td style="text-align:center"></td><td style="text-align:center"> </td><td style="text-align:center"> </td>
       <td style="text-align:center"> </td><td style="text-align:center"> </td style="text-align:center"></tr>
@@ -29,26 +30,26 @@
     </table>
   
 
-<div class = "blocks">
-  <div>
-    
+<div class = "blocks" >
+  <div >
     <button type="button" data-key="q" class="Key-module_key__Rv-Vp">q</button>
     <button type="button" data-key="w" class="Key-module_key__Rv-Vp">w</button>
     <button type="button" data-key="e" class="Key-module_key__Rv-Vp">e</button>
     <button type="button" data-key="r" class="Key-module_key__Rv-Vp">r</button>
-    <button type="button" data-key="t" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="correct" aria-label="t correct">t</button>
+    <button type="button" data-key="t" class="Key-module_key__Rv-Vp">t</button>
     <button type="button" data-key="y" class="Key-module_key__Rv-Vp">y</button>
     <button type="button" data-key="u" class="Key-module_key__Rv-Vp">u</button>
-    <button type="button" data-key="i" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="present" aria-label="i present">i</button>
+    <button type="button" data-key="i" class="Key-module_key__Rv-Vp">i</button>
     <button type="button" data-key="o" class="Key-module_key__Rv-Vp">o</button>
-    <button type="button" data-key="p" class="Key-module_key__Rv-Vp">p</button>
+    <button type="button" data-key="P" class="Key-module_key__Rv-Vp">p</button>
   </div>
   <div class="Keyboard-module_row__YWe5w">
   <div data-testid="spacer" class="Key-module_half__ljsj8">
 
-  </div><button type="button" data-key="a" class="Key-module_key__Rv-Vp">a</button>
-    <button type="button" data-key="s" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent" aria-label="s absent">s</button>
-    <button type="button" data-key="d" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="present" aria-label="d present">d</button>
+  </div>
+    <button type="button" data-key="a" class="Key-module_key__Rv-Vp">a</button>
+    <button type="button" data-key="s" class="Key-module_key__Rv-Vp">s</button>
+    <button type="button" data-key="d" class="Key-module_key__Rv-Vp">d</button>
     <button type="button" data-key="f" class="Key-module_key__Rv-Vp">f</button>
     <button type="button" data-key="g" class="Key-module_key__Rv-Vp">g</button>
     <button type="button" data-key="h" class="Key-module_key__Rv-Vp">h</button>
@@ -80,10 +81,11 @@
 
 <style>
     td {
+      font-weight: bold;
       border: 2px solid gray;
     }
     td {
-   
+      margin: 2px;
       padding: 15px;
       border-radius: 5px
     }
@@ -114,6 +116,12 @@
     margin-top:200px;
     }
 
+    .Khaki {
+      background-color: Khaki;
+    }
+
+
+    
     .red {
       background-color: red;
     }
@@ -124,9 +132,16 @@
     .gray {
       background-color: gray;
     }
-    .Khaki {
-      background-color: Khaki;
-    }
+    @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-ThinItalic-webfont.eot');
+    src: url('Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-ThinItalic-webfont.woff') format('woff'),
+         url('Roboto-ThinItalic-webfont.ttf') format('truetype'),
+         url('Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg');
+    font-weight: 200;
+    font-style: 'bold';
+}
 
 </style>
 <script>

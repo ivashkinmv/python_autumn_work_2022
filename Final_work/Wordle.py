@@ -72,11 +72,11 @@ def game():
                     print(answer.index(letter))
                     if letter in wordle:
                         if wordle.index(letter) != answer.index(letter):
-                            # lst.append(letter.upper())
+                            lst.append(letter)
                             dic.update({j: 'Khaki'})
                         else:
                             # lst.append("'")
-                            # lst.append(letter.upper())
+                            lst.append(letter)
                             dic.update({j: 'SkyBlue'})
                             print(j)
                             # lst.append("'")

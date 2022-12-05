@@ -26,13 +26,8 @@ function input(){ d ='';
         setTimeout(send(), 2000);
         setTimeout(alert('Вы заполнили все буквы'), 5000)
           }
-        //console.log(d.length)
       });}
 
-      
-
-      //$(document).on('keydown',function(e) {
-      //  if(e.which == 46) {input(); n=0}});
 
     $(document).on('keydown',function(e) {
     if(e.which == 9) {send()}});
@@ -52,22 +47,6 @@ function send(){
           })
           .done(function(data) {
               if (data) {
-                // $('#game_field tr').eq(n).children("td").eq(0
-                // ).text(data.word.word[0]).addClass(data.color[0]);
-
-                // $('#game_field tr').eq(n).children("td").eq(1
-                // ).text(data.word.word[1]).addClass(data.color[1]);
-
-                // $('#game_field tr').eq(n).children("td").eq(2
-                // ).text(data.word.word[2]).addClass(data.color[2]);
-
-                // $('#game_field tr').eq(n).children("td").eq(3
-                // ).text(data.word.word[3]).addClass(data.color[3]);
-
-                // $('#game_field tr').eq(n).children("td").eq(4
-                // ).text(data.word.word[4]).addClass(data.color[4]);
-
-
 
                 $('#game_field tr').eq(n).children("td").eq(0
                 ).addClass(data.color[0]);
@@ -84,8 +63,24 @@ function send(){
                 $('#game_field tr').eq(n).children("td").eq(4
                 ).addClass(data.color[4]);
                 
-                $("button").eq('n').addClass('red');
-                $(this).data('state','absent')
+                $("button[data-key='" +data.word.word[0] +"']").addClass(data.color[0]);
+                $("button[data-key='" +data.word.word[1] +"']").addClass(data.color[1]);
+                $("button[data-key='" +data.word.word[2] +"']").addClass(data.color[2]);
+                $("button[data-key='" +data.word.word[3] +"']").addClass(data.color[3]);
+                $("button[data-key='" +data.word.word[4] +"']").addClass(data.color[4]);
+
+                if (!$('button').hasClass('Key-module_key__Rv-Vp Khaki SkyBlue', console.log("цвет есть"))) {$("button[class='Key-module_key__Rv-Vp SkyBlue']");}
+
+
+                console.log(data.color[0])
+                console.log(data.color[1])
+                console.log(data.color[2])
+                console.log(data.color[2])
+                console.log(data.color[4])
+
+
+                // $("button").eq('n').addClass('red');
+                // $(this).data('state','absent')
                console.log(data.word.word.join(''))
                console.log(form_data.toUpperCase())
                   
@@ -94,7 +89,13 @@ function send(){
                 console.log(n, "Заполнение ")
 
               if (data.word.word.join('') == form_data.toUpperCase()) {
-                    alert("Вы угадали")}
+                $("button[data-key='" +data.word.word[0] +"']").addClass(data.color[0]);
+                $("button[data-key='" +data.word.word[1] +"']").addClass(data.color[1]);
+                $("button[data-key='" +data.word.word[2] +"']").addClass(data.color[2]);
+                $("button[data-key='" +data.word.word[3] +"']").addClass(data.color[3]);
+                $("button[data-key='" +data.word.word[4] +"']").addClass(data.color[4]);
+                    //alert("Вы угадали")
+                  }
 
                 if (n==6){alert("Игра окончена");} 
 
